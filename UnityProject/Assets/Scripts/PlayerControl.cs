@@ -23,12 +23,34 @@ public class PlayerControl : MonoBehaviour
 	private bool grounded = false;			// Whether or not the player is grounded.
 	private Animator anim;					// Reference to the player's animator component.
 
+	private string JumpButton = "Jump";
+	private string HorizontalAxis = "Horizontal";
 
 	void Awake()
 	{
 		// Setting up references.
 		groundCheck = transform.Find("groundCheck");
 		anim = GetComponent<Animator>();
+		
+		switch (gameObject.name) 
+		{
+		case "hero1": 
+			JumpButton += "Player1";
+			HorizontalAxis += "Player1";
+			break;
+		case "hero2":
+			JumpButton += "Player2";
+			HorizontalAxis += "Player2";
+			break;
+		case "hero3":
+			JumpButton += "Player3";
+			HorizontalAxis += "Player3";
+			break;
+		case "hero4":
+			JumpButton += "Player4";
+			HorizontalAxis += "Player4";
+			break;
+		}
 	}
 
 
@@ -38,7 +60,7 @@ public class PlayerControl : MonoBehaviour
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));  
 
 		// If the jump button is pressed and the player is grounded then the player should jump.
-		if(Input.GetButtonDown("Jump") && grounded)
+		if(Input.GetButtonDown(JumpButton) && grounded)
 			jump = true;
 	}
 
@@ -46,7 +68,7 @@ public class PlayerControl : MonoBehaviour
 	void FixedUpdate ()
 	{
 		// Cache the horizontal input.
-		float h = Input.GetAxis("Horizontal");
+		float h = Input.GetAxis(HorizontalAxis);
 
 		// The Speed animator parameter is set to the absolute value of the horizontal input.
 		anim.SetFloat("Speed", Mathf.Abs(h));

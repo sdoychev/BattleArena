@@ -10,19 +10,37 @@ public class Gun : MonoBehaviour
 	private PlayerControl playerCtrl;		// Reference to the PlayerControl script.
 	private Animator anim;					// Reference to the Animator component.
 
+	private string FireButton = "Fire";
 
 	void Awake()
 	{
 		// Setting up the references.
 		anim = transform.root.gameObject.GetComponent<Animator>();
 		playerCtrl = transform.root.GetComponent<PlayerControl>();
+		
+		switch (gameObject.transform.parent.transform.name) 
+		{
+		case "hero1":  
+			FireButton += "Player1";
+			break;
+		case "hero2":
+			FireButton += "Player2";
+			break;
+		case "hero3":
+			FireButton += "Player3";
+			break;
+		case "hero4":
+			FireButton += "Player4";
+			break;
+		}
 	}
 
 
 	void Update ()
 	{
 		// If the fire button is pressed...
-		if(Input.GetButtonDown("Fire1"))
+		//if(Input.GetButtonDown(FireButton))
+		if( Input.GetAxisRaw(FireButton) != 0)
 		{
 			// ... set the animator Shoot trigger parameter and play the audioclip.
 			anim.SetTrigger("Shoot");
