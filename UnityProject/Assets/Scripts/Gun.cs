@@ -11,6 +11,8 @@ public class Gun : MonoBehaviour
 	private Animator anim;					// Reference to the Animator component.
 
 	private string FireButton = "Fire";
+	private string AimHorizontalAxis = "AimHorizontal";
+	private string AimVerticalAxis = "AimVertical";
 
 	void Awake()
 	{
@@ -22,15 +24,23 @@ public class Gun : MonoBehaviour
 		{
 		case "hero1":  
 			FireButton += "Player1";
+			AimHorizontalAxis += "Player1";
+			AimVerticalAxis += "Player1";
 			break;
 		case "hero2":
 			FireButton += "Player2";
+			AimHorizontalAxis += "Player2";
+			AimVerticalAxis += "Player2";
 			break;
 		case "hero3":
 			FireButton += "Player3";
+			AimHorizontalAxis += "Player3";
+			AimVerticalAxis += "Player3";
 			break;
 		case "hero4":
 			FireButton += "Player4";
+			AimHorizontalAxis += "Player4";
+			AimVerticalAxis += "Player4";
 			break;
 		}
 	}
@@ -38,6 +48,9 @@ public class Gun : MonoBehaviour
 
 	void Update ()
 	{
+		if (gameObject.transform.parent.transform.name == "hero4")
+			Debug.Log (AimHorizontalAxis + "   " + Input.GetAxis (AimHorizontalAxis) + "   " + Input.GetAxis (AimVerticalAxis));
+
 		// If the fire button is pressed...
 		//if(Input.GetButtonDown(FireButton))
 		if( Input.GetAxisRaw(FireButton) != 0)
