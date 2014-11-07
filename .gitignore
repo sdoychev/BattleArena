@@ -1,0 +1,17 @@
+UnityProject/Library
+UnityProject/Temp
+UnityProject/UnityProject.sln
+UnityProject/UnityProject-csharp.sln
+UnityProject/UnityProject.userprefs
+UnityProject/Assembly-CSharp.csproj
+UnityProject/Assembly-CSharp-vs.csproj
+UnityProject/Assembly-CSharp-firstpass.csproj
+UnityProject/Assembly-CSharp-firstpass-vs.csproj
+UnityProject/Assembly-UnityScript-firstpass.unityproj
+UnityProject/Assembly-UnityScript-firstpass-vs.unityproj
+unity-svn-ignore.txt
+*.csproj
+*.unityproj
+*.pidb
+*.sln
+*.userprefs
