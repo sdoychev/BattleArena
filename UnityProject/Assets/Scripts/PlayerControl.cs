@@ -26,6 +26,9 @@ public class PlayerControl : MonoBehaviour
 	private string JumpButton = "Jump";
 	private string HorizontalAxis = "Horizontal";
 
+	private string AimHorizontalAxis = "AimHorizontal";
+	private string AimVerticalAxis = "AimVertical";
+
 	void Awake()
 	{
 		// Setting up references.
@@ -37,18 +40,26 @@ public class PlayerControl : MonoBehaviour
 		case "hero1": 
 			JumpButton += "Player1";
 			HorizontalAxis += "Player1";
+			AimHorizontalAxis += "Player1";
+			AimVerticalAxis += "Player1";
 			break;
 		case "hero2":
 			JumpButton += "Player2";
 			HorizontalAxis += "Player2";
+			AimHorizontalAxis += "Player2";
+			AimVerticalAxis += "Player2";
 			break;
 		case "hero3":
 			JumpButton += "Player3";
 			HorizontalAxis += "Player3";
+			AimHorizontalAxis += "Player3";
+			AimVerticalAxis += "Player3";
 			break;
 		case "hero4":
 			JumpButton += "Player4";
 			HorizontalAxis += "Player4";
+			AimHorizontalAxis += "Player4";
+			AimVerticalAxis += "Player4";
 			break;
 		}
 	}
@@ -68,7 +79,7 @@ public class PlayerControl : MonoBehaviour
 	void FixedUpdate ()
 	{
 		// Cache the horizontal input.
-		float h = Input.GetAxis(HorizontalAxis);
+		float h = Input.GetAxis(AimHorizontalAxis);
 
 		// The Speed animator parameter is set to the absolute value of the horizontal input.
 		anim.SetFloat("Speed", Mathf.Abs(h));

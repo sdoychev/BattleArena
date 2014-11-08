@@ -48,9 +48,6 @@ public class Gun : MonoBehaviour
 
 	void Update ()
 	{
-		if (gameObject.transform.parent.transform.name == "hero4")
-			Debug.Log (AimHorizontalAxis + "   " + Input.GetAxis (AimHorizontalAxis) + "   " + Input.GetAxis (AimVerticalAxis));
-
 		// If the fire button is pressed...
 		//if(Input.GetButtonDown(FireButton))
 		if( Input.GetAxisRaw(FireButton) != 0)
@@ -66,15 +63,26 @@ public class Gun : MonoBehaviour
 			// If the player is facing right...
 			if(playerCtrl.facingRight)
 			{
+				if (0.01f > v1 && v1 > -0.01 && 0.01f  > v2 && v2 > -0.01)
+				{
+					v1 = 1.0f;
+					v2 = 0.0f;
+				}
 				// ... instantiate the rocket facing right and set it's velocity to the right. 
 				Rigidbody2D bulletInstance = Instantiate(rocket, transform.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
 				bulletInstance.velocity = new Vector2(v1*speed, -v2*speed);
 			}
 			else
 			{
+				if (0.01f > v1 && v1 > -0.01 && 0.01f  > v2 && v2 > -0.01)
+				{
+					v1 = -1.0f;
+					v2 = 0.0f;
+				}
+
 				// Otherwise instantiate the rocket facing left and set it's velocity to the left.
 				Rigidbody2D bulletInstance = Instantiate(rocket, transform.position, Quaternion.Euler(new Vector3(0,0,180f))) as Rigidbody2D;
-				bulletInstance.velocity = new Vector2(-speed*v1, -speed*v2);
+				bulletInstance.velocity = new Vector2(speed*v1, -speed*v2);
 			}
 		}
 	}
