@@ -3,6 +3,8 @@ using System.Collections;
 
 public class ChangeWeapon : MonoBehaviour {
 
+	Vector3 newPosition = new Vector3 (-1f, 2f, -2f);
+
 	// Use this for initialization
 	void Start () {
 	
@@ -12,6 +14,9 @@ public class ChangeWeapon : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		//gameObject.transform.GetChild (0).GetComponent<MeshRenderer> ().enabled = true;
+		gameObject.transform.GetChild (0).transform.position = gameObject.transform.position;
 	
 	}
 }

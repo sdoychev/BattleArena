@@ -8,7 +8,6 @@ public class PlayerControl : MonoBehaviour
 	[HideInInspector]
 	public bool jump = false;				// Condition for whether the player should jump.
 
-
 	public float moveForce = 365f;			// Amount of force added to move the player left and right.
 	public float maxSpeed = 5f;				// The fastest the player can travel in the x axis.
 	public AudioClip[] jumpClips;			// Array of clips for when the player jumps.
