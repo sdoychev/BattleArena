@@ -28,6 +28,8 @@ public class PlayerControl : MonoBehaviour
 	private string AimHorizontalAxis = "AimHorizontal";
 	private string AimVerticalAxis = "AimVertical";
 
+	private float jumpTimer = 0f;
+
 	void Awake()
 	{
 		// Setting up references.
@@ -66,11 +68,19 @@ public class PlayerControl : MonoBehaviour
 
 	void Update()
 	{
+		if (jumpTimer > 0) {
+						jumpTimer -= Time.deltaTime;
+				}
+
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));  
 
+		//if (gameObject.name == "hero4")
+
+			//Debug.Log (grounded);
+
 		// If the jump button is pressed and the player is grounded then the player should jump.
-		if((Input.GetAxisRaw(JumpButton) != 0) && grounded)
+		if((Input.GetAxisRaw(JumpButton) != 0) && grounded && jumpTimer <= 0f)
 			jump = true;
 	}
 
@@ -120,6 +130,7 @@ public class PlayerControl : MonoBehaviour
 
 			// Make sure the player can't jump again until the jump conditions from Update are satisfied.
 			jump = false;
+			jumpTimer = 0.09f;
 		}
 	}
 	
