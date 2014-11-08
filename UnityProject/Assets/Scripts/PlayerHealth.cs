@@ -15,12 +15,29 @@ public class PlayerHealth : MonoBehaviour
 	private PlayerControl playerControl;		// Reference to the PlayerControl script.
 	private Animator anim;						// Reference to the Animator on the player
 
+	private string playerHealthBar = "HealthBar";
 
 	void Awake ()
 	{
+		switch (gameObject.transform.name) 
+		{
+		case "hero1":  
+			playerHealthBar += "Player1";
+			break;
+		case "hero2":
+			playerHealthBar += "Player2";
+			break;
+		case "hero3":
+			playerHealthBar += "Player3";
+			break;
+		case "hero4":
+			playerHealthBar += "Player4";
+			break;
+		}
+
 		// Setting up references.
 		playerControl = GetComponent<PlayerControl>();
-		healthBar = GameObject.Find("HealthBar").GetComponent<SpriteRenderer>();
+		healthBar = GameObject.Find(playerHealthBar).GetComponent<SpriteRenderer>();
 		anim = GetComponent<Animator>();
 
 		// Getting the intial scale of the healthbar (whilst the player has full health).
