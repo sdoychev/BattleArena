@@ -10,7 +10,7 @@ public class FollowPlayer : MonoBehaviour
 	private string playerGameObject = "hero";
 
 	void Awake ()
-	{
+	{/*
 		switch (gameObject.transform.parent.transform.name) 
 		{
 			case "hero1":  
@@ -25,11 +25,11 @@ public class FollowPlayer : MonoBehaviour
 			case "hero4":
 			playerGameObject += "4";
 			break;
-		}
+		}*/
 
 		// Setting up the reference.
 		//player = GameObject.FindGameObjectWithTag("Player").transform;
-		player = GameObject.Find(playerGameObject).transform;
+        player = GameObject.Find(gameObject.transform.parent.transform.name).transform;
 	}
 
 	void Update ()
