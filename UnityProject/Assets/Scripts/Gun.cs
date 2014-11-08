@@ -60,6 +60,13 @@ public class Gun : MonoBehaviour
 			v1 = Input.GetAxis (AimHorizontalAxis);
 			v2 = Input.GetAxis (AimVerticalAxis);
 
+            Vector2 v = new Vector2(v1, v2);
+            v.Normalize();
+            v1 = v.x;
+            v2 = v.y;
+
+            
+
 			// If the player is facing right...
 			if(playerCtrl.facingRight)
 			{
