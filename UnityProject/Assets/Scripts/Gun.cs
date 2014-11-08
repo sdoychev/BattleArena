@@ -14,8 +14,19 @@ public class Gun : MonoBehaviour
 	private string AimHorizontalAxis = "AimHorizontal";
 	private string AimVerticalAxis = "AimVertical";
 
+	private float fireRate { get; set; }
+	private float fireTimer{ set; get; }
+	private int damage{ set; get; }
+	private float bulletSpeed { set; get; }
+	private bool isBouncy { set; get; }
+	private bool hasGravity { set; get; }
+	private bool isAOE { set; get; }
+	private Rigidbody2D bullet { set; get; }
+
 	void Awake()
 	{
+		bullet = rocket; //hardcoded for testing purposes
+
 		// Setting up the references.
 		anim = transform.root.gameObject.GetComponent<Animator>();
 		playerCtrl = transform.root.GetComponent<PlayerControl>();
