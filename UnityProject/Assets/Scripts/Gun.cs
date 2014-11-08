@@ -25,8 +25,6 @@ public class Gun : MonoBehaviour
 
 	void Awake()
 	{
-		bullet = rocket; //hardcoded for testing purposes
-
 		// Setting up the references.
 		anim = transform.root.gameObject.GetComponent<Animator>();
 		playerCtrl = transform.root.GetComponent<PlayerControl>();
