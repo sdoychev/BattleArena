@@ -48,8 +48,6 @@ public class Gun : MonoBehaviour
 
 	void Update ()
 	{
-		if (gameObject.transform.parent.transform.name == "hero4")
-			Debug.Log (AimHorizontalAxis + "   " + Input.GetAxis (AimHorizontalAxis) + "   " + Input.GetAxis (AimVerticalAxis));
 
 		// If the fire button is pressed...
 		//if(Input.GetButtonDown(FireButton))
