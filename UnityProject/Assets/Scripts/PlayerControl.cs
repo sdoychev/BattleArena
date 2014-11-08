@@ -81,6 +81,9 @@ public class PlayerControl : MonoBehaviour
 		// Cache the horizontal input.
 		float h = Input.GetAxis(HorizontalAxis);
 		float hd = Input.GetAxis(AimHorizontalAxis);
+
+		if (hd == 0) //if no aim - get the move direction
+			hd = h;
 		// The Speed animator parameter is set to the absolute value of the horizontal input.
 		anim.SetFloat("Speed", Mathf.Abs(h));
 
