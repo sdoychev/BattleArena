@@ -4,6 +4,7 @@ using System.Collections;
 public class Rocket : MonoBehaviour 
 {
 	public GameObject explosion;		// Prefab of explosion effect.
+    public float damage;
 
 
 	void Start () 
@@ -49,11 +50,25 @@ public class Rocket : MonoBehaviour
 			Destroy (gameObject);
 		}
 		// Otherwise if the player manages to shoot himself...
-		else if(col.gameObject.tag != "Player")
-		{
-			// Instantiate the explosion and destroy the rocket.
-			OnExplode();
-			Destroy (gameObject);
-		}
+        else if (col.gameObject.tag == "Player")
+        {
+            // ... find the Enemy script and call the Hurt function.
+            col.GetComponent<PlayerHealth>().ApplyDamage(damage);
+
+            // Call the explosion instantiation.
+            OnExplode();
+
+            // Destroy the rocket.
+            Destroy(gameObject);
+        }
+        else
+        {
+            // Call the explosion instantiation.
+            OnExplode();
+
+            // Destroy the rocket.
+            Destroy(gameObject);
+        }
 	}
+
 }
