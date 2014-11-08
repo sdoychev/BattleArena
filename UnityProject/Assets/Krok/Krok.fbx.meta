@@ -15,6 +15,23 @@ ModelImporter:
     100018: //RootNode
     100020: Plane
     100022: Root
+    100024: Arm_L
+    100026: Arm_Socket
+    100028: ArmUpper_L
+    100030: Foot_L
+    100032: Foot_R
+    100034: Head
+    100036: Krokodil_Armature
+    100038: Krokodil_Body
+    100040: Mandibula
+    100042: Shin_L
+    100044: Shin_R
+    100046: Tail_01
+    100048: Tail_02
+    100050: Tail_03
+    100052: Thigh_L
+    100054: Thigh_R
+    100056: Torso
     400000: Arm
     400002: Armature
     400004: Bone_001
@@ -27,12 +44,31 @@ ModelImporter:
     400018: //RootNode
     400020: Plane
     400022: Root
+    400024: Arm_L
+    400026: Arm_Socket
+    400028: ArmUpper_L
+    400030: Foot_L
+    400032: Foot_R
+    400034: Head
+    400036: Krokodil_Armature
+    400038: Krokodil_Body
+    400040: Mandibula
+    400042: Shin_L
+    400044: Shin_R
+    400046: Tail_01
+    400048: Tail_02
+    400050: Tail_03
+    400052: Thigh_L
+    400054: Thigh_R
+    400056: Torso
     4300000: Plane
+    4300002: Krokodil_Body
     7400000: Default Take
     7400002: Test
     9500000: //RootNode
     11100000: //RootNode
     13700000: Plane
+    13700002: Krokodil_Body
   materials:
     importMaterials: 1
     materialName: 0
@@ -102,7 +138,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1.60000002
+    globalScale: 2
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
