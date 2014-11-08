@@ -32,6 +32,9 @@ ModelImporter:
     100052: Thigh_L
     100054: Thigh_R
     100056: Torso
+    100058: Tail.01
+    100060: Tail.02
+    100062: Tail.03
     400000: Arm
     400002: Armature
     400004: Bone_001
@@ -61,10 +64,14 @@ ModelImporter:
     400052: Thigh_L
     400054: Thigh_R
     400056: Torso
+    400058: Tail.01
+    400060: Tail.02
+    400062: Tail.03
     4300000: Plane
     4300002: Krokodil_Body
     7400000: Default Take
     7400002: Test
+    7400004: RunCycle
     9500000: //RootNode
     11100000: //RootNode
     13700000: Plane
@@ -86,10 +93,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Test
-      takeName: Test
-      firstFrame: 0
-      lastFrame: 19
+      name: RunCycle
+      takeName: RunCycle
+      firstFrame: -1
+      lastFrame: 29
       wrapMode: 2
       orientationOffsetY: 0
       level: 0

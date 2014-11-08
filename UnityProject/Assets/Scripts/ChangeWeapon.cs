@@ -16,7 +16,7 @@ public class ChangeWeapon : MonoBehaviour {
 	void Update () {
 
 		//gameObject.transform.GetChild (0).GetComponent<MeshRenderer> ().enabled = true;
-		gameObject.transform.GetChild (0).transform.position = gameObject.transform.position;
+		gameObject.transform.position = gameObject.transform.position;
 	
 	}
 }
