@@ -48,10 +48,6 @@ public class Gun : MonoBehaviour
 
 	void Update ()
 	{
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 		// If the fire button is pressed...
 		//if(Input.GetButtonDown(FireButton))
 		if( Input.GetAxisRaw(FireButton) != 0)
