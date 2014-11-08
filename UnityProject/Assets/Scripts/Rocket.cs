@@ -5,6 +5,7 @@ public class Rocket : MonoBehaviour
 {
 	public GameObject explosion;		// Prefab of explosion effect.
     public float damage;
+	public bool isAOE;
 
 
 	void Start () 
@@ -21,6 +22,18 @@ public class Rocket : MonoBehaviour
 
 		// Instantiate the explosion where the rocket is with the random rotation.
 		Instantiate(explosion, transform.position, randomRotation);
+
+		GameObject[] objs;
+		objs = GameObject.FindGameObjectsWithTag ("Player");
+
+		foreach (GameObject curobj in objs)
+		{
+			float dist = Vector2.Distance(gameObject.transform.position, curobj.transform.position);
+			if (dist < 3)
+			{
+				curobj.GetComponent<PlayerHealth>().ApplyDamage(damage);
+			}
+		}
 	}
 	
 	void OnTriggerEnter2D (Collider2D col) 
@@ -53,7 +66,8 @@ public class Rocket : MonoBehaviour
         else if (col.gameObject.tag == "Player")
         {
             // ... find the Enemy script and call the Hurt function.
-            col.GetComponent<PlayerHealth>().ApplyDamage(damage);
+            if (!isAOE)
+				col.GetComponent<PlayerHealth>().ApplyDamage(damage);
 
             // Call the explosion instantiation.
             OnExplode();
