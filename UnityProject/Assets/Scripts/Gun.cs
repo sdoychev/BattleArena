@@ -5,7 +5,8 @@ public class Gun : MonoBehaviour
 {
 	public Rigidbody2D rocket;				// Prefab of the rocket.
 	public float speed = 20f;				// The speed the rocket will fire at.
-
+	public float fireRate;
+	private float fireTimer = 0f;
 
 	private PlayerControl playerCtrl;		// Reference to the PlayerControl script.
 	private Animator anim;					// Reference to the Animator component.
@@ -14,24 +15,16 @@ public class Gun : MonoBehaviour
 	private string AimHorizontalAxis = "AimHorizontal";
 	private string AimVerticalAxis = "AimVertical";
 
-	private float fireRate { get; set; }
-	private float fireTimer{ set; get; }
-	private int damage{ set; get; }
-	private float bulletSpeed { set; get; }
-	private bool isBouncy { set; get; }
-	private bool hasGravity { set; get; }
-	private bool isAOE { set; get; }
-	private Rigidbody2D bullet { set; get; }
+
+
 
 	void Awake()
 	{
-		bullet = rocket; //hardcoded for testing purposes
-
 		// Setting up the references.
 		anim = transform.root.gameObject.GetComponent<Animator>();
 		playerCtrl = transform.root.GetComponent<PlayerControl>();
 		
-		switch (gameObject.transform.parent.transform.name) 
+		switch (gameObject.transform.parent.transform.parent.transform.name) 
 		{
 		case "hero1":  
 			FireButton += "Player1";
@@ -61,8 +54,13 @@ public class Gun : MonoBehaviour
 	{
 		// If the fire button is pressed...
 		//if(Input.GetButtonDown(FireButton))
-		if( Input.GetAxisRaw(FireButton) != 0)
+		
+		fireTimer -= Time.deltaTime;
+
+		if( Input.GetAxisRaw(FireButton) != 0  && fireTimer <= 0.1f)
 		{
+			fireTimer = fireRate;
+
 			// ... set the animator Shoot trigger parameter and play the audioclip.
 			anim.SetTrigger("Shoot");
 			audio.Play();
