@@ -7,6 +7,7 @@ public class Gun : MonoBehaviour
 	public float speed = 20f;				// The speed the rocket will fire at.
 	public float fireRate;
 	private float fireTimer = 0f;
+    public bool applyForceToBullet;
 
 	private PlayerControl playerCtrl;		// Reference to the PlayerControl script.
 	private Animator anim;					// Reference to the Animator component.
@@ -86,7 +87,15 @@ public class Gun : MonoBehaviour
 				}
 				// ... instantiate the rocket facing right and set it's velocity to the right. 
 				Rigidbody2D bulletInstance = Instantiate(rocket, transform.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
-				bulletInstance.velocity = new Vector2(v1*speed, -v2*speed);
+				Vector2 vel = new Vector2(v1*speed, -v2*speed);
+                if (applyForceToBullet)
+                {
+                    bulletInstance.AddForce(vel);
+                }
+                else
+                {
+                    bulletInstance.velocity = vel;
+                }
 			}
 			else
 			{
@@ -98,7 +107,15 @@ public class Gun : MonoBehaviour
 
 				// Otherwise instantiate the rocket facing left and set it's velocity to the left.
 				Rigidbody2D bulletInstance = Instantiate(rocket, transform.position, Quaternion.Euler(new Vector3(0,0,180f))) as Rigidbody2D;
-				bulletInstance.velocity = new Vector2(speed*v1, -speed*v2);
+                Vector2 vel = new Vector2(v1 * speed, -v2 * speed);
+                if (applyForceToBullet)
+                {
+                    bulletInstance.AddForce(vel);
+                }
+                else
+                {
+                    bulletInstance.velocity = vel;
+                }
 			}
 		}
 	}
