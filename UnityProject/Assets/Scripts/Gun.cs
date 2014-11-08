@@ -1,9 +1,15 @@
-﻿﻿using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class Gun : MonoBehaviour
 {
-	public Rigidbody2D rocket;				// Prefab of the rocket.
+	public Rigidbody2D flintgun;
+	public Rigidbody2D minigun;
+	public Rigidbody2D cannon;
+	public Rigidbody2D pig;
+	public Rigidbody2D trap;
+	public Rigidbody2D activeWeapon;
+
 	public float speed = 20f;				// The speed the rocket will fire at.
 	public float fireRate;
 	private float fireTimer = 0f;
@@ -86,7 +92,7 @@ public class Gun : MonoBehaviour
 					v2 = 0.0f;
 				}
 				// ... instantiate the rocket facing right and set it's velocity to the right. 
-				Rigidbody2D bulletInstance = Instantiate(rocket, transform.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
+				Rigidbody2D bulletInstance = Instantiate(activeWeapon, transform.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
 				Vector2 vel = new Vector2(v1*speed, -v2*speed);
 				if (applyForceToBullet)
 				{
@@ -106,7 +112,7 @@ public class Gun : MonoBehaviour
 				}
 				
 				// Otherwise instantiate the rocket facing left and set it's velocity to the left.
-				Rigidbody2D bulletInstance = Instantiate(rocket, transform.position, Quaternion.Euler(new Vector3(0,0,180f))) as Rigidbody2D;
+				Rigidbody2D bulletInstance = Instantiate(activeWeapon, transform.position, Quaternion.Euler(new Vector3(0,0,180f))) as Rigidbody2D;
 				Vector2 vel = new Vector2(v1 * speed, -v2 * speed);
 				if (applyForceToBullet)
 				{

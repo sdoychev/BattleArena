@@ -9,7 +9,7 @@ public class ChangeWeapon : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	
-		switch (gameObject.transform.parent.
+		switch (gameObject.transform.parent.transform.parent.
 		        transform.parent.transform.parent.
 		        transform.parent.transform.parent.
 		        transform.parent.name) 
@@ -39,9 +39,9 @@ public class ChangeWeapon : MonoBehaviour {
 		float v1,v2;
 		v1 = Input.GetAxis (AimHorizontalAxis);
 		v2 = Input.GetAxis (AimVerticalAxis);
-		Vector2 v = new Vector2(v1, v2);
 
-		//gameObject.transform.LookAt(v. transform, Vector3.up);
+		float angle = Mathf.Atan2(v1, v2) * Mathf.Rad2Deg; 
+		//gameObject.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 	
 	}
 }
