@@ -71,7 +71,7 @@ public class PlayerControl : MonoBehaviour
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));  
 
 		// If the jump button is pressed and the player is grounded then the player should jump.
-		if(Input.GetButtonDown(JumpButton) && grounded)
+		if((Input.GetAxisRaw(JumpButton) != 0) && grounded)
 			jump = true;
 	}
 
@@ -79,8 +79,8 @@ public class PlayerControl : MonoBehaviour
 	void FixedUpdate ()
 	{
 		// Cache the horizontal input.
-		float h = Input.GetAxis(AimHorizontalAxis);
-
+		float h = Input.GetAxis(HorizontalAxis);
+		float hd = Input.GetAxis(AimHorizontalAxis);
 		// The Speed animator parameter is set to the absolute value of the horizontal input.
 		anim.SetFloat("Speed", Mathf.Abs(h));
 
@@ -95,11 +95,11 @@ public class PlayerControl : MonoBehaviour
 			rigidbody2D.velocity = new Vector2(Mathf.Sign(rigidbody2D.velocity.x) * maxSpeed, rigidbody2D.velocity.y);
 
 		// If the input is moving the player right and the player is facing left...
-		if(h > 0 && !facingRight)
+		if(hd > 0 && !facingRight)
 			// ... flip the player.
 			Flip();
 		// Otherwise if the input is moving the player left and the player is facing right...
-		else if(h < 0 && facingRight)
+		else if(hd < 0 && facingRight)
 			// ... flip the player.
 			Flip();
 
