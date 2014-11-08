@@ -61,6 +61,10 @@ public class Rocket : MonoBehaviour
             // Destroy the rocket.
             Destroy(gameObject);
         }
+        else if (col.tag == "SailColliedr")
+        {
+            //go trough sailsS 
+        }
         else
         {
             // Call the explosion instantiation.
