@@ -32,7 +32,7 @@ public class PlayerControl : MonoBehaviour
 
 	private char heroIndex = '0';
 
-	void Awake()
+	void Start()
 	{
 		// Setting up references.
 		groundCheck = transform.Find("groundCheck");
@@ -70,7 +70,14 @@ public class PlayerControl : MonoBehaviour
 			break;
 		}
 		
-		int roundIndex = 1; //TODO - get round index
+		int roundIndex = 9;
+
+		GameObject globalScript = GameObject.Find("GlobalObject");
+		if (globalScript)
+		{
+			roundIndex = globalScript.GetComponent<GlobalScript>().GetRound();
+			Debug.Log("aaaaaa " + heroIndex + " " + roundIndex);
+		}
 
 		heroIndex = (char)(heroIndex + roundIndex - 1);
 		if (heroIndex > '4')
