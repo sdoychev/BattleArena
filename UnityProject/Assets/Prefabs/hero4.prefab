@@ -1523,9 +1523,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9bf156813c141e98b61835f46356f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flintgun: {fileID: 5000000, guid: 418b69b5a330cb94d87aaea971152e84, type: 2}
+  flintgun: {fileID: 5000000, guid: de3b99ec18bab1a448f5d8a7893c3816, type: 2}
   minigun: {fileID: 5000000, guid: 418b69b5a330cb94d87aaea971152e84, type: 2}
-  cannon: {fileID: 5000000, guid: 418b69b5a330cb94d87aaea971152e84, type: 2}
+  cannon: {fileID: 5000000, guid: f9dd63e5ea2a00e4c9ca09c80fb3a14c, type: 2}
   pig: {fileID: 5000000, guid: 418b69b5a330cb94d87aaea971152e84, type: 2}
   trap: {fileID: 5000000, guid: 418b69b5a330cb94d87aaea971152e84, type: 2}
   activeWeapon: {fileID: 5000000, guid: 418b69b5a330cb94d87aaea971152e84, type: 2}
