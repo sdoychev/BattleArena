@@ -585,6 +585,56 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!1 &100175570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 100175572}
+  - 212: {fileID: 100175571}
+  m_Layer: 0
+  m_Name: Avatar_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &100175571
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 100175570}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: b8fa968889f040a45881d195de8f6799, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &100175572
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 100175570}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 30.2360001, y: 16.6609993, z: 0}
+  m_LocalScale: {x: 2.77224207, y: 2.77224231, z: 2.77224231}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 35
 --- !u!1 &120051681
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,6 +944,7 @@ MonoBehaviour:
   pig: {fileID: 0}
   trap: {fileID: 0}
   activeWeapon: {fileID: 0}
+  explosion: {fileID: 0}
   speed: 25
   fireRate: 0
   applyForceToBullet: 0
@@ -2967,12 +3018,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9bf156813c141e98b61835f46356f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flintgun: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
-  minigun: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
-  cannon: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
-  pig: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
-  trap: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
-  activeWeapon: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  flintgun: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  minigun: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  cannon: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  pig: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  trap: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  activeWeapon: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  explosion: {fileID: 0}
   speed: 20
   fireRate: 0
   applyForceToBullet: 0
@@ -4597,12 +4649,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9bf156813c141e98b61835f46356f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flintgun: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
-  minigun: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
-  cannon: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
-  pig: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
-  trap: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
-  activeWeapon: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  flintgun: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  minigun: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  cannon: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  pig: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  trap: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  activeWeapon: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  explosion: {fileID: 0}
   speed: 20
   fireRate: 0
   applyForceToBullet: 0
@@ -5414,12 +5467,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9bf156813c141e98b61835f46356f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flintgun: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
-  minigun: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
-  cannon: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
-  pig: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
-  trap: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
-  activeWeapon: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  flintgun: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  minigun: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  cannon: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  pig: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  trap: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  activeWeapon: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  explosion: {fileID: 0}
   speed: 20
   fireRate: 0
   applyForceToBullet: 0
@@ -5513,6 +5567,56 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 0464bc7aafbbafb498e288220b6584c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &470002256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 470002258}
+  - 212: {fileID: 470002257}
+  m_Layer: 0
+  m_Name: Avatar_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &470002257
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 470002256}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: 5f8f325a43b220c44b959cbb0e968766, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &470002258
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 470002256}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -31.8010006, y: -13.3459997, z: 0}
+  m_LocalScale: {x: -2.19647598, y: 2.19647598, z: 2.19647598}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 34
 --- !u!1 &470677090
 GameObject:
   m_ObjectHideFlags: 0
@@ -5541,6 +5645,56 @@ Transform:
   - {fileID: 850029474}
   m_Father: {fileID: 1913451700}
   m_RootOrder: 0
+--- !u!1 &482131260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 482131262}
+  - 212: {fileID: 482131261}
+  m_Layer: 0
+  m_Name: Avatar_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &482131261
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 482131260}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: 12f01321ced87c74ea8aa6ba29d31693, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &482131262
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 482131260}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -32.473999, y: 15.7410002, z: 0}
+  m_LocalScale: {x: -2.20000005, y: 2.29474974, z: 2.29474974}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 33
 --- !u!1 &503110112
 GameObject:
   m_ObjectHideFlags: 0
@@ -7014,12 +7168,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9bf156813c141e98b61835f46356f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flintgun: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
-  minigun: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
-  cannon: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
-  pig: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
-  trap: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
-  activeWeapon: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  flintgun: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  minigun: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  cannon: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  pig: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  trap: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  activeWeapon: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  explosion: {fileID: 0}
   speed: 20
   fireRate: 0
   applyForceToBullet: 0
@@ -13156,6 +13311,56 @@ SkinnedMeshRenderer:
     m_Center: {x: -.183349609, y: 1.69539416, z: -.0107548237}
     m_Extent: {x: .90991199, y: 1.84210002, z: 1.64895868}
   m_DirtyAABB: 0
+--- !u!1 &1241912707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1241912709}
+  - 212: {fileID: 1241912708}
+  m_Layer: 0
+  m_Name: Avatar_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1241912708
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1241912707}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: 0595c23ae12a5cc41930ff6e1df8215e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &1241912709
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1241912707}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 30.1340008, y: -13.3170004, z: 0}
+  m_LocalScale: {x: 3.00204825, y: 3.00204802, z: 3.00204802}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 36
 --- !u!1001 &1243540802
 Prefab:
   m_ObjectHideFlags: 0
@@ -16563,6 +16768,7 @@ MonoBehaviour:
   pig: {fileID: 0}
   trap: {fileID: 0}
   activeWeapon: {fileID: 0}
+  explosion: {fileID: 0}
   speed: 25
   fireRate: 0
   applyForceToBullet: 0
@@ -18089,6 +18295,7 @@ MonoBehaviour:
   pig: {fileID: 0}
   trap: {fileID: 0}
   activeWeapon: {fileID: 0}
+  explosion: {fileID: 0}
   speed: 25
   fireRate: 0
   applyForceToBullet: 0
@@ -18327,6 +18534,7 @@ MonoBehaviour:
   pig: {fileID: 0}
   trap: {fileID: 0}
   activeWeapon: {fileID: 0}
+  explosion: {fileID: 0}
   speed: 25
   fireRate: 0
   applyForceToBullet: 0
