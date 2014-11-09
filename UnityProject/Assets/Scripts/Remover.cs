@@ -29,10 +29,22 @@ public class Remover : MonoBehaviour
 			// ... reload the level.
             if (deathGamecount == maxDeaths)
             {
+                GameObject[] lastPlayer = GameObject.FindGameObjectsWithTag("Player");
+                foreach(GameObject player in lastPlayer)
+                {
+
+                    if (!player.GetComponent<PlayerHealth>().IsDead())
+                    {
+                        GameObject globalScript = GameObject.Find("GlobalObject");
+                        if (globalScript)
+                        {
+                            globalScript.GetComponent<GlobalScript>().UpdatePlayerScore(player.transform.name, 1);
+                        }
+                    }
+                }
                 deathGamecount = 0;
                 StartCoroutine("ReloadGame");
-                GameObject[] lastPlayer = GameObject.FindGameObjectsWithTag("Player");
-                print(lastPlayer.Length);
+
 
             }
             else

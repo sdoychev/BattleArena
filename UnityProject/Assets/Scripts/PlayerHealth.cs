@@ -114,6 +114,11 @@ public class PlayerHealth : MonoBehaviour
 		healthBar.transform.localScale = new Vector3(healthScale.x * health * 0.01f, 1, 1);
 	}
 
+    public bool IsDead()
+    {
+        return health <= 0.0f;
+    }
+
     void Die()
     {
         // Find all of the colliders on the gameobject and set them all to be triggers.

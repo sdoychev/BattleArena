@@ -31,4 +31,9 @@ public class Score : MonoBehaviour
 		previousScore = score;
 	}
 
+    public void SetGuiText(string text)
+    {
+        guiText.text = text;
+    }
+
 }
