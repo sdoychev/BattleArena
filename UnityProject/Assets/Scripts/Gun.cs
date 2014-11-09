@@ -173,6 +173,7 @@ public class Gun : MonoBehaviour
 
 				// Otherwise instantiate the rocket facing left and set it's velocity to the left.
 				Rigidbody2D bulletInstance = Instantiate(activeWeapon, transform.position + offset*3, Quaternion.Euler(new Vector3(0,0,180f))) as Rigidbody2D;
+                Instantiate(explosion, transform.position + offset * 3, randomRotation);
 				Vector2 vel = new Vector2(v1 * speed, -v2 * speed);
 				if (applyForceToBullet)
 				{
