@@ -7,6 +7,6 @@ public class MC_AutoRotate : MonoBehaviour
 	
 	void Update ()
 	{
-		this.transform.Rotate(rotation * Time.deltaTime, Space.World);
+		this.transform.Rotate(rotation * Time.deltaTime/6, Space.World);
 	}
 }
