@@ -77,7 +77,9 @@ public class PlayerControl : MonoBehaviour
 		    heroIndex = '1';
 
 		GameObject spawnerObj = GameObject.Find ("hero_spawner" + heroIndex);
-		//TODO this.transform.position = spawnerObj.transform.position;
+
+		if (spawnerObj)
+			this.transform.position = spawnerObj.transform.position;
 	}
 
 
