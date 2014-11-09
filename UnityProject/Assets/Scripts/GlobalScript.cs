@@ -39,7 +39,58 @@ public class GlobalScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (hero1_score >= maxScore)
+		GameObject skull;
+
+		skull = GameObject.Find ("Skull_1_1");
+		if (hero1_score > 0) {
+						skull.renderer.enabled = true;
+				} else {
+					skull.renderer.enabled = false;
+				}
+		skull = GameObject.Find ("Skull_1_2");
+		if (hero1_score > 1) {
+			skull.renderer.enabled = true;
+		} else {
+			skull.renderer.enabled = false;
+		}
+		skull = GameObject.Find ("Skull_2_1");
+		if (hero2_score > 0) {
+			skull.renderer.enabled = true;
+		} else {
+			skull.renderer.enabled = false;
+		}
+		skull = GameObject.Find ("Skull_2_2");
+		if (hero2_score > 1) {
+			skull.renderer.enabled = true;
+		} else {
+			skull.renderer.enabled = false;
+		}
+		skull = GameObject.Find ("Skull_3_1");
+		if (hero3_score > 0) {
+			skull.renderer.enabled = true;
+		} else {
+			skull.renderer.enabled = false;
+		}
+		skull = GameObject.Find ("Skull_3_2");
+		if (hero3_score > 1) {
+			skull.renderer.enabled = true;
+		} else {
+			skull.renderer.enabled = false;
+		}
+		skull = GameObject.Find ("Skull_4_1");
+		if (hero4_score > 0) {
+			skull.renderer.enabled = true;
+		} else {
+			skull.renderer.enabled = false;
+		}
+		skull = GameObject.Find ("Skull_4_2");
+		if (hero4_score > 1) {
+			skull.renderer.enabled = true;
+		} else {
+			skull.renderer.enabled = false;
+		}
+
+		if (hero1_score >= maxScore)
         {
             WinGame("hero1");
         }else  if (hero2_score >= maxScore)
