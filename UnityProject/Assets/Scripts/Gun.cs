@@ -10,6 +10,8 @@ public class Gun : MonoBehaviour
 	public Rigidbody2D trap;
 	public Rigidbody2D activeWeapon;
 
+    public GameObject explosion;
+
     private Transform flitngunObj;
     private Transform minigunObj;
     private Transform cannonObj;
@@ -83,14 +85,20 @@ public class Gun : MonoBehaviour
             case 0:
                 flitngunObj.active = true;
                 activeWeapon = flintgun;
+                speed = 50;
+                fireRate = 0.5f;
                 break;
             case 1:
                 minigunObj.active = true;
                 activeWeapon = minigun;
+                speed = 50;
+                fireRate = 0.2f;
                 break;
             case 2:
                 cannonObj.active = true;
                 activeWeapon = cannon;
+                speed = 20;
+                fireRate = 1;
                 break;
             case 3:
                 trapObj.active = true;
@@ -138,6 +146,11 @@ public class Gun : MonoBehaviour
 
 				// ... instantiate the rocket facing right and set it's velocity to the right. 
 				Rigidbody2D bulletInstance = Instantiate(activeWeapon, transform.position + offset*3, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
+                // Create a quaternion with a random rotation in the z-axis.
+                Quaternion randomRotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
+
+                // Instantiate the explosion where the rocket is with the random rotation.
+                Instantiate(explosion, transform.position + offset * 3, randomRotation);
 				Vector2 vel = new Vector2(v1*speed, -v2*speed);
 				if (applyForceToBullet)
 				{
