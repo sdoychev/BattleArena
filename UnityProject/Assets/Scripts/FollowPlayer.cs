@@ -27,6 +27,8 @@ public class FollowPlayer : MonoBehaviour
 			break;
 		}*/
 
+		offset.y = 5;
+
 		// Setting up the reference.
 		//player = GameObject.FindGameObjectWithTag("Player").transform;
         player = GameObject.Find(gameObject.transform.parent.transform.name).transform;
