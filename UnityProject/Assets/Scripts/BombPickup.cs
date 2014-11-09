@@ -27,7 +27,28 @@ public class BombPickup : MonoBehaviour
 
 			// Increase the number of bombs the player has.
 			other.GetComponent<LayBombs>().bombCount++;
-            other.GetComponent<Gun>().SwitchWeapon();
+            //other.GetComponent<Gun>().SwitchWeapon();
+           string krok = "Krok";
+            switch (other.name)
+            {
+                case "hero1":
+                    krok += "1";
+                    break;
+                case "hero2":
+                    krok += "2";
+                    break;
+                case "hero3":
+                    krok += "3";
+                    break;
+                case "hero4":
+                    krok += "4";
+                    break;
+            }
+            string path = krok + "/Krokodil_Armature/Root/Torso/Arm_Socket/ArmWithWeapon/Hand";
+            print(path);
+
+            other.transform.Find(path).gameObject.GetComponent<Gun>().SwitchWeapon(2);
+           
 
 			// Destroy the crate.
 			Destroy(transform.root.gameObject);

@@ -10,6 +10,11 @@ public class Gun : MonoBehaviour
 	public Rigidbody2D trap;
 	public Rigidbody2D activeWeapon;
 
+    private Transform flitngunObj;
+    private Transform minigunObj;
+    private Transform cannonObj;
+    private Transform trapObj;
+
 	public float speed = 20f;				// The speed the rocket will fire at.
 	public float fireRate;
 	private float fireTimer = 0f;
@@ -58,11 +63,40 @@ public class Gun : MonoBehaviour
 			AimVerticalAxis += "Player4";
 			break;
 		}
+
+        flitngunObj = transform.Find("Weapon/Flintlock");
+        minigunObj = transform.Find("Weapon/MachineGun");
+        cannonObj = transform.Find("Weapon/Cannon");
+        trapObj = transform.Find("Weapon/Trap");
 	}
 
-    public void SwitchWeapon()
+    public void SwitchWeapon(int weapon)
     {
-        int waeapon = Random.Range(0, 3);
+       // int weapon = Random.Range(0, 3);
+        flitngunObj.active = false;
+        minigunObj.active = false;
+        cannonObj.active = false;
+        trapObj.active = false;
+
+        switch (weapon)
+        {
+            case 0:
+                flitngunObj.active = true;
+                activeWeapon = flintgun;
+                break;
+            case 1:
+                minigunObj.active = true;
+                activeWeapon = minigun;
+                break;
+            case 2:
+                cannonObj.active = true;
+                activeWeapon = cannon;
+                break;
+            case 3:
+                trapObj.active = true;
+                activeWeapon = trap;
+                break;
+        }
     }
 
 	void Update ()
