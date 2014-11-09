@@ -547,8 +547,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 99182814}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0836099982, y: -15.6999998, z: -99.0999985}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -.0836099982, y: -16.1630001, z: -99.0999985}
+  m_LocalScale: {x: 1, y: 1.35000002, z: 1}
   m_Children:
   - {fileID: 145308009}
   m_Father: {fileID: 1972830852}
@@ -585,6 +585,33 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!1 &120051681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 120051682}
+  m_Layer: 0
+  m_Name: hero_spawner3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &120051682
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 120051681}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.3169994, y: -1.19089997, z: -1}
+  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1.20000005}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
 --- !u!1 &125353915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2082,7 +2109,6 @@ GameObject:
   - 4: {fileID: 179533788}
   - 33: {fileID: 179533787}
   - 23: {fileID: 179533786}
-  - 111: {fileID: 179533785}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -2090,22 +2116,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!111 &179533785
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11100000, guid: 0feeb4de1d170a044827bfa4b1e24206,
-    type: 2}
-  m_PrefabInternal: {fileID: 559052033}
-  m_GameObject: {fileID: 179533784}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 066a7385c6490ce468383ad4b0a1278c, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: 066a7385c6490ce468383ad4b0a1278c, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!23 &179533786
 Renderer:
   m_ObjectHideFlags: 0
@@ -2525,7 +2535,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 315133782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.1299992, y: .419999987, z: 0}
+  m_LocalPosition: {x: -27.1609993, y: -.716009974, z: 0}
   m_LocalScale: {x: -1.14205098, y: .387499988, z: 1}
   m_Children:
   - {fileID: 1339779398}
@@ -2821,12 +2831,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9bf156813c141e98b61835f46356f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flintgun: {fileID: 0}
-  minigun: {fileID: 0}
-  cannon: {fileID: 0}
-  pig: {fileID: 0}
-  trap: {fileID: 0}
-  activeWeapon: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  flintgun: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  minigun: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  cannon: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  pig: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  trap: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  activeWeapon: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
   speed: 20
   fireRate: 0
   applyForceToBullet: 0
@@ -4451,12 +4461,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9bf156813c141e98b61835f46356f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flintgun: {fileID: 0}
-  minigun: {fileID: 0}
-  cannon: {fileID: 0}
-  pig: {fileID: 0}
-  trap: {fileID: 0}
-  activeWeapon: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  flintgun: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  minigun: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  cannon: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  pig: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  trap: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  activeWeapon: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
   speed: 20
   fireRate: 0
   applyForceToBullet: 0
@@ -4964,7 +4974,6 @@ GameObject:
   - 4: {fileID: 444289952}
   - 33: {fileID: 444289955}
   - 23: {fileID: 444289954}
-  - 111: {fileID: 444289953}
   m_Layer: 0
   m_Name: MachineGun
   m_TagString: Untagged
@@ -4984,22 +4993,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 666789969}
   m_RootOrder: 3
---- !u!111 &444289953
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11100000, guid: 6e4f3530a7199b5469d3cdacfcea951d,
-    type: 2}
-  m_PrefabInternal: {fileID: 421817231}
-  m_GameObject: {fileID: 444289951}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: e63be77b8a1350840a5779c95fc32d93, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: e63be77b8a1350840a5779c95fc32d93, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!23 &444289954
 Renderer:
   m_ObjectHideFlags: 0
@@ -5081,7 +5074,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 446847320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.8700008, y: 2.54999995, z: 0}
+  m_LocalPosition: {x: 25.9370003, y: .076715, z: 0}
   m_LocalScale: {x: -.925346434, y: .296666831, z: 1}
   m_Children:
   - {fileID: 175541213}
@@ -5285,12 +5278,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9bf156813c141e98b61835f46356f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flintgun: {fileID: 0}
-  minigun: {fileID: 0}
-  cannon: {fileID: 0}
-  pig: {fileID: 0}
-  trap: {fileID: 0}
-  activeWeapon: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  flintgun: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  minigun: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  cannon: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  pig: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  trap: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  activeWeapon: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
   speed: 20
   fireRate: 0
   applyForceToBullet: 0
@@ -5357,7 +5350,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 464246478}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.434, y: 1.99259996, z: 0}
+  m_LocalPosition: {x: 11.6400003, y: 1.12090003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1298452281}
@@ -5764,6 +5757,33 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ddd0ca15e5d0a42b98f08337c1690bb1, type: 3}
   tauntProbability: 50
   tauntDelay: 1
+--- !u!1 &523119054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 523119055}
+  m_Layer: 0
+  m_Name: hero_spawner4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &523119055
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 523119054}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.69839954, y: -3.75500011, z: -1}
+  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1.20000005}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
 --- !u!1 &527861343
 GameObject:
   m_ObjectHideFlags: 0
@@ -5843,7 +5863,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 540807365}
   m_LocalRotation: {x: 0, y: 0, z: -.391990274, w: .91996944}
-  m_LocalPosition: {x: -11.79, y: -9.42000008, z: 0}
+  m_LocalPosition: {x: -11.6800003, y: -9.60779953, z: 0}
   m_LocalScale: {x: -.899577081, y: .387499988, z: 1}
   m_Children: []
   m_Father: {fileID: 1632332901}
@@ -6061,7 +6081,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &580409290
 Transform:
   m_ObjectHideFlags: 0
@@ -6807,12 +6827,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9bf156813c141e98b61835f46356f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flintgun: {fileID: 0}
-  minigun: {fileID: 0}
-  cannon: {fileID: 0}
-  pig: {fileID: 0}
-  trap: {fileID: 0}
-  activeWeapon: {fileID: 5000000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  flintgun: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  minigun: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  cannon: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  pig: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  trap: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
+  activeWeapon: {fileID: 5000000, guid: 97fe6724c2d1df54e8e5d6de38808fc2, type: 2}
   speed: 20
   fireRate: 0
   applyForceToBullet: 0
@@ -7389,7 +7409,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 734994867}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.9700003, y: 5.63000011, z: 0}
+  m_LocalPosition: {x: 14.4729996, y: 4.20900011, z: 0}
   m_LocalScale: {x: .791930914, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1298452281}
@@ -8078,7 +8098,6 @@ GameObject:
   - 4: {fileID: 853547781}
   - 33: {fileID: 853547784}
   - 23: {fileID: 853547783}
-  - 111: {fileID: 853547782}
   m_Layer: 0
   m_Name: Trap
   m_TagString: Untagged
@@ -8098,22 +8117,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1982300101}
   m_RootOrder: 0
---- !u!111 &853547782
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11100002, guid: d782f587172c236458d951be7e3b3d86,
-    type: 2}
-  m_PrefabInternal: {fileID: 46006596}
-  m_GameObject: {fileID: 853547780}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: d54d61831ec4b4949b78a5c7bc77f5e6, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: d54d61831ec4b4949b78a5c7bc77f5e6, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!23 &853547783
 Renderer:
   m_ObjectHideFlags: 0
@@ -9508,7 +9511,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 898666927}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.64999998, y: 6.36999989, z: 0}
+  m_LocalPosition: {x: 1.64999998, y: 5.77519989, z: 0}
   m_LocalScale: {x: -2.75029564, y: .387499988, z: 1}
   m_Children:
   - {fileID: 842542786}
@@ -9654,7 +9657,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 909603956}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.3879995, y: 4.50540018, z: 0}
+  m_LocalPosition: {x: -16.0499992, y: 3.78789997, z: 0}
   m_LocalScale: {x: 1.03562045, y: 1.03562033, z: 1.03562033}
   m_Children: []
   m_Father: {fileID: 1298452281}
@@ -9768,7 +9771,6 @@ GameObject:
   - 4: {fileID: 935939622}
   - 33: {fileID: 935939625}
   - 23: {fileID: 935939624}
-  - 111: {fileID: 935939623}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -9788,22 +9790,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1009643988}
   m_RootOrder: 2
---- !u!111 &935939623
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11100000, guid: a8cb535d9ac4f94478fc48fa98f6668c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1609084067}
-  m_GameObject: {fileID: 935939621}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 066a7385c6490ce468383ad4b0a1278c, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: 066a7385c6490ce468383ad4b0a1278c, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!23 &935939624
 Renderer:
   m_ObjectHideFlags: 0
@@ -10072,7 +10058,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 953049170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .772099972, y: 6.05730009, z: 0}
+  m_LocalPosition: {x: .772099972, y: 5.67689991, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1298452281}
@@ -10356,7 +10342,6 @@ GameObject:
   - 4: {fileID: 991451193}
   - 33: {fileID: 991451196}
   - 23: {fileID: 991451195}
-  - 111: {fileID: 991451194}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -10376,22 +10361,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1982300101}
   m_RootOrder: 2
---- !u!111 &991451194
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11100004, guid: d782f587172c236458d951be7e3b3d86,
-    type: 2}
-  m_PrefabInternal: {fileID: 46006596}
-  m_GameObject: {fileID: 991451192}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 066a7385c6490ce468383ad4b0a1278c, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: 066a7385c6490ce468383ad4b0a1278c, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!23 &991451195
 Renderer:
   m_ObjectHideFlags: 0
@@ -10819,6 +10788,33 @@ Transform:
   - {fileID: 385141477}
   m_Father: {fileID: 1784337004}
   m_RootOrder: 0
+--- !u!1 &1049383740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1049383741}
+  m_Layer: 0
+  m_Name: hero_spawner2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1049383741
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1049383740}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.0130005, y: 4.9842, z: -1}
+  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1.20000005}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
 --- !u!1 &1055003608
 GameObject:
   m_ObjectHideFlags: 0
@@ -11080,7 +11076,7 @@ GameObject:
   m_Layer: 9
   m_Name: groundCheck
   m_TagString: Untagged
-  m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -12660,7 +12656,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
       propertyPath: orthographic size
-      value: 18
+      value: 19.7000008
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 64b12b15baf9644af9f0651e6705f0ef, type: 2}
       propertyPath: m_Enabled
@@ -15415,7 +15411,6 @@ GameObject:
   - 4: {fileID: 1327881380}
   - 33: {fileID: 1327881383}
   - 23: {fileID: 1327881382}
-  - 111: {fileID: 1327881381}
   m_Layer: 0
   m_Name: Trap
   m_TagString: Untagged
@@ -15435,22 +15430,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 666789969}
   m_RootOrder: 0
---- !u!111 &1327881381
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11100004, guid: 6e4f3530a7199b5469d3cdacfcea951d,
-    type: 2}
-  m_PrefabInternal: {fileID: 421817231}
-  m_GameObject: {fileID: 1327881379}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: d54d61831ec4b4949b78a5c7bc77f5e6, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: d54d61831ec4b4949b78a5c7bc77f5e6, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!23 &1327881382
 Renderer:
   m_ObjectHideFlags: 0
@@ -15803,7 +15782,6 @@ GameObject:
   - 4: {fileID: 1395947020}
   - 33: {fileID: 1395947023}
   - 23: {fileID: 1395947022}
-  - 111: {fileID: 1395947021}
   m_Layer: 0
   m_Name: Trap
   m_TagString: Untagged
@@ -15823,22 +15801,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1286631165}
   m_RootOrder: 0
---- !u!111 &1395947021
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11100002, guid: 0feeb4de1d170a044827bfa4b1e24206,
-    type: 2}
-  m_PrefabInternal: {fileID: 559052033}
-  m_GameObject: {fileID: 1395947019}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: d54d61831ec4b4949b78a5c7bc77f5e6, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: d54d61831ec4b4949b78a5c7bc77f5e6, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!23 &1395947022
 Renderer:
   m_ObjectHideFlags: 0
@@ -16073,7 +16035,6 @@ GameObject:
   - 4: {fileID: 1405166810}
   - 33: {fileID: 1405166813}
   - 23: {fileID: 1405166812}
-  - 111: {fileID: 1405166811}
   m_Layer: 0
   m_Name: MachineGun
   m_TagString: Untagged
@@ -16093,22 +16054,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1286631165}
   m_RootOrder: 3
---- !u!111 &1405166811
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11100004, guid: 0feeb4de1d170a044827bfa4b1e24206,
-    type: 2}
-  m_PrefabInternal: {fileID: 559052033}
-  m_GameObject: {fileID: 1405166809}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: e63be77b8a1350840a5779c95fc32d93, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: e63be77b8a1350840a5779c95fc32d93, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!23 &1405166812
 Renderer:
   m_ObjectHideFlags: 0
@@ -17454,7 +17399,7 @@ GameObject:
   m_Layer: 9
   m_Name: Gun
   m_TagString: Untagged
-  m_Icon: {fileID: -215833656, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -17751,7 +17696,7 @@ GameObject:
   m_Layer: 9
   m_Name: Gun
   m_TagString: Untagged
-  m_Icon: {fileID: -215833656, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -17871,7 +17816,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1513315365}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.57000017, y: 12.54, z: 0}
+  m_LocalPosition: {x: 4.57000017, y: 10.7620001, z: 0}
   m_LocalScale: {x: -.524459898, y: .340052217, z: 1}
   m_Children:
   - {fileID: 223667497}
@@ -17923,14 +17868,13 @@ GameObject:
   - 4: {fileID: 1513704253}
   - 33: {fileID: 1513704256}
   - 23: {fileID: 1513704255}
-  - 111: {fileID: 1513704254}
   m_Layer: 0
   m_Name: MachineGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1513704253
 Transform:
   m_ObjectHideFlags: 0
@@ -17943,22 +17887,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1982300101}
   m_RootOrder: 3
---- !u!111 &1513704254
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11100006, guid: d782f587172c236458d951be7e3b3d86,
-    type: 2}
-  m_PrefabInternal: {fileID: 46006596}
-  m_GameObject: {fileID: 1513704252}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: e63be77b8a1350840a5779c95fc32d93, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: e63be77b8a1350840a5779c95fc32d93, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!23 &1513704255
 Renderer:
   m_ObjectHideFlags: 0
@@ -19959,7 +19887,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1648491006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.0699997, y: -4.67000008, z: 0}
+  m_LocalPosition: {x: 20.7560005, y: -6.15110016, z: 0}
   m_LocalScale: {x: -1.11249983, y: .387500465, z: 1}
   m_Children:
   - {fileID: 2138289665}
@@ -20012,7 +19940,7 @@ GameObject:
   m_Layer: 9
   m_Name: groundCheck
   m_TagString: Untagged
-  m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -20290,6 +20218,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 23
+--- !u!1 &1719912190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1719912191}
+  m_Layer: 0
+  m_Name: hero_spawner1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1719912191
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1719912190}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -25.2229996, y: 6.44089985, z: -1}
+  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1.20000005}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
 --- !u!1 &1728939335
 GameObject:
   m_ObjectHideFlags: 0
@@ -20583,7 +20538,6 @@ GameObject:
   - 4: {fileID: 1756578629}
   - 33: {fileID: 1756578632}
   - 23: {fileID: 1756578631}
-  - 111: {fileID: 1756578630}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -20603,22 +20557,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 666789969}
   m_RootOrder: 2
---- !u!111 &1756578630
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11100006, guid: 6e4f3530a7199b5469d3cdacfcea951d,
-    type: 2}
-  m_PrefabInternal: {fileID: 421817231}
-  m_GameObject: {fileID: 1756578628}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 066a7385c6490ce468383ad4b0a1278c, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: 066a7385c6490ce468383ad4b0a1278c, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!23 &1756578631
 Renderer:
   m_ObjectHideFlags: 0
@@ -22813,7 +22751,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 18
+  orthographic size: 19.7000008
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -22865,7 +22803,6 @@ GameObject:
   - 4: {fileID: 1977063476}
   - 33: {fileID: 1977063479}
   - 23: {fileID: 1977063478}
-  - 111: {fileID: 1977063477}
   m_Layer: 0
   m_Name: Trap
   m_TagString: Untagged
@@ -22885,22 +22822,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1009643988}
   m_RootOrder: 0
---- !u!111 &1977063477
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11100004, guid: a8cb535d9ac4f94478fc48fa98f6668c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1609084067}
-  m_GameObject: {fileID: 1977063475}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: d54d61831ec4b4949b78a5c7bc77f5e6, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: d54d61831ec4b4949b78a5c7bc77f5e6, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!23 &1977063478
 Renderer:
   m_ObjectHideFlags: 0
@@ -23169,7 +23090,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2039731733}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.23650002, y: 12.0369997, z: 0}
+  m_LocalPosition: {x: 2.43919992, y: 11.026, z: 0}
   m_LocalScale: {x: 1.10820031, y: 1.10819995, z: 1.10819995}
   m_Children: []
   m_Father: {fileID: 1298452281}
@@ -23246,7 +23167,6 @@ GameObject:
   - 4: {fileID: 2067733356}
   - 33: {fileID: 2067733359}
   - 23: {fileID: 2067733358}
-  - 111: {fileID: 2067733357}
   m_Layer: 0
   m_Name: MachineGun
   m_TagString: Untagged
@@ -23266,22 +23186,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1009643988}
   m_RootOrder: 3
---- !u!111 &2067733357
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11100006, guid: a8cb535d9ac4f94478fc48fa98f6668c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1609084067}
-  m_GameObject: {fileID: 2067733355}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: e63be77b8a1350840a5779c95fc32d93, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: e63be77b8a1350840a5779c95fc32d93, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!23 &2067733358
 Renderer:
   m_ObjectHideFlags: 0
