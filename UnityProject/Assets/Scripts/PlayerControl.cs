@@ -30,6 +30,8 @@ public class PlayerControl : MonoBehaviour
 
 	private float jumpTimer = 0f;
 
+	private char heroIndex = '0';
+
 	void Awake()
 	{
 		// Setting up references.
@@ -43,26 +45,39 @@ public class PlayerControl : MonoBehaviour
 			HorizontalAxis += "Player1";
 			AimHorizontalAxis += "Player1";
 			AimVerticalAxis += "Player1";
+			heroIndex = '1';
 			break;
 		case "hero2":
 			JumpButton += "Player2";
 			HorizontalAxis += "Player2";
 			AimHorizontalAxis += "Player2";
 			AimVerticalAxis += "Player2";
+			heroIndex = '2';
 			break;
 		case "hero3":
 			JumpButton += "Player3";
 			HorizontalAxis += "Player3";
 			AimHorizontalAxis += "Player3";
 			AimVerticalAxis += "Player3";
+			heroIndex = '3';
 			break;
 		case "hero4":
 			JumpButton += "Player4";
 			HorizontalAxis += "Player4";
 			AimHorizontalAxis += "Player4";
 			AimVerticalAxis += "Player4";
+			heroIndex = '4';
 			break;
 		}
+		
+		int roundIndex = 1; //TODO - get round index
+
+		heroIndex = (char)(heroIndex + roundIndex - 1);
+		if (heroIndex > '4')
+		    heroIndex = '1';
+
+		GameObject spawnerObj = GameObject.Find ("hero_spawner" + heroIndex);
+		this.transform.position = spawnerObj.transform.position;
 	}
 
 
