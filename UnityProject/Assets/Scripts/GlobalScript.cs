@@ -15,8 +15,9 @@ public class GlobalScript : MonoBehaviour {
 
     void Awake()
     {
-        Load();
+		Load();
         score = GameObject.Find("Score").GetComponent<Score>();
+		score.SetGuiText("");
         //maxScore -= 1;// we are programmers and we count from zero
 		round++;
     }
