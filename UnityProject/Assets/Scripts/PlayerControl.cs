@@ -77,7 +77,7 @@ public class PlayerControl : MonoBehaviour
 		    heroIndex = '1';
 
 		GameObject spawnerObj = GameObject.Find ("hero_spawner" + heroIndex);
-		this.transform.position = spawnerObj.transform.position;
+		//TODO this.transform.position = spawnerObj.transform.position;
 	}
 
 
@@ -147,6 +147,19 @@ public class PlayerControl : MonoBehaviour
 			jump = false;
 			jumpTimer = 0.09f;
 		}
+
+		if (gameObject.name == "hero"+heroIndex) 
+		{
+			if (gameObject.rigidbody2D.velocity.x != 0)
+			{
+				GameObject.Find("Krok"+heroIndex).GetComponent<Animation>().Play("Krokodil_Armature|RunCycle", PlayMode.StopAll);
+			}
+			else 
+			{
+				GameObject.Find("Krok"+heroIndex).GetComponent<Animation>().Play("Krokodil_Armature|Idle", PlayMode.StopAll);
+			}
+		}
+
 	}
 	
 	
