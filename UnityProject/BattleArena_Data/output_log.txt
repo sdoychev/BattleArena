@@ -19,7 +19,8 @@ Platform assembly: C:\Unity\BattleArena\UnityProject\BattleArena_Data\Managed\As
 Loading C:\Unity\BattleArena\UnityProject\BattleArena_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
 Platform assembly: C:\Unity\BattleArena\UnityProject\BattleArena_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Unity\BattleArena\UnityProject\BattleArena_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.110 seconds
+- Completed reload, in  0.047 seconds
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
+Platform assembly: C:\Unity\BattleArena\UnityProject\BattleArena_Data\Managed\System.Core.dll (this message is harmless)

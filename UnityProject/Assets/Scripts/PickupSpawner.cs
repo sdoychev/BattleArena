@@ -24,7 +24,7 @@ public class PickupSpawner : MonoBehaviour
 	void Start ()
 	{
 		// Start the first delivery.
-		StartCoroutine(DeliverPickup());
+		//StartCoroutine(DeliverPickup());
 	}
 
 
