@@ -31,10 +31,8 @@ public class Gun : MonoBehaviour
 		anim = transform.root.gameObject.GetComponent<Animator>();
 		playerCtrl = transform.root.GetComponent<PlayerControl>();
 		
-		switch (gameObject.transform.parent.
-		        transform.parent.transform.parent.
-		        transform.parent.transform.parent.
-		        transform.parent.transform.parent.
+		switch (gameObject.transform.parent.transform.parent.
+		        transform.parent.transform.parent.transform.parent.
 		        transform.parent.transform.parent.
 		        transform.name) 
 		{
@@ -96,8 +94,11 @@ public class Gun : MonoBehaviour
 					v1 = 1.0f;
 					v2 = 0.0f;
 				}
+
+				Vector3 offset = new Vector3(v1, -v2, 0);
+
 				// ... instantiate the rocket facing right and set it's velocity to the right. 
-				Rigidbody2D bulletInstance = Instantiate(activeWeapon, transform.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
+				Rigidbody2D bulletInstance = Instantiate(activeWeapon, transform.position + offset*3, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
 				Vector2 vel = new Vector2(v1*speed, -v2*speed);
 				if (applyForceToBullet)
 				{
@@ -115,9 +116,11 @@ public class Gun : MonoBehaviour
 					v1 = -1.0f;
 					v2 = 0.0f;
 				}
-				
+
+				Vector3 offset = new Vector3(v1, -v2, 0);
+
 				// Otherwise instantiate the rocket facing left and set it's velocity to the left.
-				Rigidbody2D bulletInstance = Instantiate(activeWeapon, transform.position, Quaternion.Euler(new Vector3(0,0,180f))) as Rigidbody2D;
+				Rigidbody2D bulletInstance = Instantiate(activeWeapon, transform.position + offset*3, Quaternion.Euler(new Vector3(0,0,180f))) as Rigidbody2D;
 				Vector2 vel = new Vector2(v1 * speed, -v2 * speed);
 				if (applyForceToBullet)
 				{

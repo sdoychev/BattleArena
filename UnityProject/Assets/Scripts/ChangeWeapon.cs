@@ -52,8 +52,8 @@ public class ChangeWeapon : MonoBehaviour {
 		    transform.parent.transform.parent.
 		    transform.parent.name == "hero2") 
 		{
-			Debug.Log ("mouse_pos.x" + mouse_pos.x);
-			Debug.Log ("mouse_pos.y" + mouse_pos.y);
+			//Debug.Log ("mouse_pos.x" + mouse_pos.x);
+			//Debug.Log ("mouse_pos.y" + mouse_pos.y);
 		}
 		
 		mouse_pos.x = (mouse_pos.x - player_pos.x) * -1 ;
