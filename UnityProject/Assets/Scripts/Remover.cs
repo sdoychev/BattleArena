@@ -4,6 +4,8 @@ using System.Collections;
 public class Remover : MonoBehaviour
 {
 	public GameObject splash;
+    int deathGamecount = 0;
+    int maxDeaths = 2;
 
 
 	void OnTriggerEnter2D(Collider2D col)
@@ -25,7 +27,18 @@ public class Remover : MonoBehaviour
 			// ... destroy the player.
 			Destroy (col.gameObject);
 			// ... reload the level.
-			StartCoroutine("ReloadGame");
+            if (deathGamecount == maxDeaths)
+            {
+                deathGamecount = 0;
+                StartCoroutine("ReloadGame");
+                GameObject[] lastPlayer = GameObject.FindGameObjectsWithTag("Player");
+                print(lastPlayer.Length);
+
+            }
+            else
+            {
+                deathGamecount++;
+            }
 		}
 		else
 		{
