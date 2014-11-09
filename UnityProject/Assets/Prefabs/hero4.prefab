@@ -292,7 +292,6 @@ GameObject:
   - 4: {fileID: 400036}
   - 33: {fileID: 3300004}
   - 23: {fileID: 2300004}
-  - 111: {fileID: 11100000}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -520,7 +519,6 @@ GameObject:
   - 4: {fileID: 400064}
   - 33: {fileID: 3300006}
   - 23: {fileID: 2300006}
-  - 111: {fileID: 11100004}
   m_Layer: 0
   m_Name: Trap
   m_TagString: Untagged
@@ -538,7 +536,6 @@ GameObject:
   - 4: {fileID: 400066}
   - 33: {fileID: 3300008}
   - 23: {fileID: 2300008}
-  - 111: {fileID: 11100006}
   m_Layer: 0
   m_Name: MachineGun
   m_TagString: Untagged
@@ -1455,21 +1452,6 @@ Animator:
   m_ApplyRootMotion: 0
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!111 &11100000
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100036}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 066a7385c6490ce468383ad4b0a1278c, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: 066a7385c6490ce468383ad4b0a1278c, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!111 &11100002
 Animation:
   m_ObjectHideFlags: 1
@@ -1484,36 +1466,6 @@ Animation:
   - {fileID: 7400006, guid: c5f0cabe44aa85e4f8613a999492477d, type: 3}
   m_WrapMode: 0
   m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!111 &11100004
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100064}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: d54d61831ec4b4949b78a5c7bc77f5e6, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: d54d61831ec4b4949b78a5c7bc77f5e6, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!111 &11100006
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100066}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: e63be77b8a1350840a5779c95fc32d93, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: e63be77b8a1350840a5779c95fc32d93, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!114 &11400000

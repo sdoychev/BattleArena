@@ -6,6 +6,7 @@ public class GlobalScript : MonoBehaviour {
     int hero2_score = 0;
     int hero3_score = 0;
     int hero4_score = 0;
+	int round = 0;
 
 
     public int maxScore = 3;
@@ -14,21 +15,24 @@ public class GlobalScript : MonoBehaviour {
 
     void Awake()
     {
-        Load();
+		Load();
         score = GameObject.Find("Score").GetComponent<Score>();
+		score.SetGuiText("");
+        //maxScore -= 1;// we are programmers and we count from zero
+		round++;
     }
 
 	// Use this for initialization
 	void Start () {
-
-        print("hero1");
+        /*
+        print("hero1")
         print(hero1_score);
         print("hero2");
         print(hero2_score);
         print("hero3");
         print(hero3_score);
         print("hero4");
-        print(hero4_score);
+        print(hero4_score);*/
         
 	}
 	
@@ -46,15 +50,13 @@ public class GlobalScript : MonoBehaviour {
             WinGame("hero3");
         }else  if (hero4_score >= maxScore)
         {
-            WinGame("hero4");
+			WinGame("hero4");
         }
 
 	}
 
     public void UpdatePlayerScore(string player, int score)
     {
-
-        print(player);
         switch (player)
         {
             case "hero1":
@@ -73,6 +75,11 @@ public class GlobalScript : MonoBehaviour {
         Save();
     }
 
+	public int GetRound()
+	{
+		return round;
+	}
+
     void WinGame(string player)
     {
         score.SetGuiText(player + " wins");
@@ -86,6 +93,7 @@ public class GlobalScript : MonoBehaviour {
         PlayerPrefs.SetInt("hero3_score", hero3_score);
         PlayerPrefs.SetInt("hero4_score", hero4_score);
         PlayerPrefs.SetInt("hero1_score", hero1_score);
+		PlayerPrefs.SetInt("round", round);
     }
 
     void Load()
@@ -94,14 +102,16 @@ public class GlobalScript : MonoBehaviour {
         hero2_score = PlayerPrefs.GetInt("hero2_score");
         hero3_score = PlayerPrefs.GetInt("hero3_score");
         hero4_score = PlayerPrefs.GetInt("hero4_score");
+		round = PlayerPrefs.GetInt("round");
     }
 
     // use after showing the win screen
     void Reset()
     {
-        PlayerPrefs.DeleteKey("hero1_score");
+		PlayerPrefs.DeleteKey("hero1_score");
         PlayerPrefs.DeleteKey("hero2_score");
         PlayerPrefs.DeleteKey("hero3_score");
         PlayerPrefs.DeleteKey("hero4_score");
+		PlayerPrefs.DeleteKey("round");
     }
 }
