@@ -11,7 +11,7 @@ public class Rocket : MonoBehaviour
 	void Start () 
 	{
 		// Destroy the rocket after 2 seconds if it doesn't get destroyed before then.
-		Destroy(gameObject, 2);
+		Destroy(gameObject, 4);
 	}
 
 
@@ -75,7 +75,7 @@ public class Rocket : MonoBehaviour
             // Destroy the rocket.
             Destroy(gameObject);
         }
-        else if(col.gameObject.tag == "SailCollider"){
+        else if(col.gameObject.tag == "SailCollider" || col.gameObject.tag == "Bullet"){
 
             }else
         {

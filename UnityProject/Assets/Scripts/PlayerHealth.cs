@@ -16,10 +16,13 @@ public class PlayerHealth : MonoBehaviour
 	private PlayerControl playerControl;		// Reference to the PlayerControl script.
 	private Animator anim;						// Reference to the Animator on the player
 
+
+    private bool died;
 	private string playerHealthBar = "HealthBar";
 
 	void Awake ()
 	{
+        died = false;
 		switch (gameObject.transform.name) 
 		{
 		case "hero1":  
@@ -92,17 +95,18 @@ public class PlayerHealth : MonoBehaviour
     public void ApplyDamage(float damageAmount)
     {
         health -= damageAmount;
+        // Update what the health bar looks like.
+        if(!died)
+            UpdateHealthBar();
         if (health > 0.0f)
         {
-            // Update what the health bar looks like.
-            UpdateHealthBar();
-
             // Play a random clip of the player getting hurt.
             int i = Random.Range(0, ouchClips.Length);
             AudioSource.PlayClipAtPoint(ouchClips[i], transform.position);
         }
         else
         {
+            died = true;
             Die();
         }
     }

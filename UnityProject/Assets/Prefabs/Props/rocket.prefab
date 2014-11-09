@@ -174,7 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 100000, guid: 42404bf7d14c342f69690c9961a7530d, type: 2}
   damage: 20
-  isAOE: 0
+  isAOE: 1
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
