@@ -16,19 +16,20 @@ public class GlobalScript : MonoBehaviour {
     {
         Load();
         score = GameObject.Find("Score").GetComponent<Score>();
+        maxScore -= 1;// we are programmers and we count from zero
     }
 
 	// Use this for initialization
 	void Start () {
-
-        print("hero1");
+        /*
+        print("hero1")
         print(hero1_score);
         print("hero2");
         print(hero2_score);
         print("hero3");
         print(hero3_score);
         print("hero4");
-        print(hero4_score);
+        print(hero4_score);*/
         
 	}
 	
@@ -54,7 +55,6 @@ public class GlobalScript : MonoBehaviour {
     public void UpdatePlayerScore(string player, int score)
     {
 
-        print(player);
         switch (player)
         {
             case "hero1":

@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
 	public float kDamageAmount = 10f;			// The amount of damage to take when enemies touch the player
 
 	private SpriteRenderer healthBar;			// Reference to the sprite renderer of the health bar.
+    private GameObject healthBarObject;
 	private float lastHitTime;					// The time at which the player was last hit.
 	private Vector3 healthScale;				// The local scale of the health bar initially (with full health).
 	private PlayerControl playerControl;		// Reference to the PlayerControl script.
@@ -37,7 +38,8 @@ public class PlayerHealth : MonoBehaviour
 
 		// Setting up references.
 		playerControl = GetComponent<PlayerControl>();
-		healthBar = GameObject.Find(playerHealthBar).GetComponent<SpriteRenderer>();
+		healthBarObject = GameObject.Find(playerHealthBar);
+        healthBar = healthBarObject.GetComponent<SpriteRenderer>();
 		anim = GetComponent<Animator>();
 
 		// Getting the intial scale of the healthbar (whilst the player has full health).
@@ -143,5 +145,10 @@ public class PlayerHealth : MonoBehaviour
 
         // ... Trigger the 'Die' animation state
         anim.SetTrigger("Die");
+    }
+
+    public GameObject getPlayerHealthBar()
+    {
+        return healthBarObject.transform.parent.gameObject;
     }
 }
