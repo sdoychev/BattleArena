@@ -1,0 +1,388 @@
+fileFormatVersion: 2
+guid: 3cb8e63c4a22d22439ad6ba9b49fba10
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Arm
+    100002: Arm_L
+    100004: Arm_Socket
+    100006: ArmUpper_L
+    100008: Cannon
+    100010: Foot_L
+    100012: Foot_R
+    100014: Head
+    100016: Krokodil_Armature
+    100018: Krokodil_Body
+    100020: //RootNode
+    100022: Mandibula
+    100024: Root
+    100026: Shin_L
+    100028: Shin_R
+    100030: Tail.01
+    100032: Tail.02
+    100034: Tail.03
+    100036: Thigh_L
+    100038: Thigh_R
+    100040: Torso
+    400000: Arm
+    400002: Arm_L
+    400004: Arm_Socket
+    400006: ArmUpper_L
+    400008: Cannon
+    400010: Foot_L
+    400012: Foot_R
+    400014: Head
+    400016: Krokodil_Armature
+    400018: Krokodil_Body
+    400020: //RootNode
+    400022: Mandibula
+    400024: Root
+    400026: Shin_L
+    400028: Shin_R
+    400030: Tail.01
+    400032: Tail.02
+    400034: Tail.03
+    400036: Thigh_L
+    400038: Thigh_R
+    400040: Torso
+    2300000: Arm
+    2300002: Cannon
+    3300000: Arm
+    3300002: Cannon
+    4300000: Arm
+    4300002: Cannon
+    4300004: Krokodil_Body
+    7400000: Krokodil_Armature|Idle
+    7400002: Krokodil_Armature|RunCycle
+    7400004: Arm|RunCycle
+    7400006: Krokodil_Body|RunCycle
+    7400008: Krokodil_Armature|RunCycle0
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Krokodil_Body
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Krokodil_Armature|RunCycle0
+      takeName: Krokodil_Armature|RunCycle
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Krokodil_Armature
+        weight: 1
+      - path: Krokodil_Armature/Arm
+        weight: 1
+      - path: Krokodil_Armature/Arm/Cannon
+        weight: 1
+      - path: Krokodil_Armature/Root
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Arm_Socket
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/ArmUpper_L
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/ArmUpper_L/Arm_L
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Foot_L
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Foot_R
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Head
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Head/Mandibula
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Tail.01
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Tail.01/Tail.02
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Tail.01/Tail.02/Tail.03
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Thigh_L
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Thigh_L/Shin_L
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Thigh_R
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Thigh_R/Shin_R
+        weight: 1
+      - path: Krokodil_Body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Krokodil_Armature|RunCycle
+      takeName: Krokodil_Armature|RunCycle
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Krokodil_Armature
+        weight: 1
+      - path: Krokodil_Armature/Arm
+        weight: 1
+      - path: Krokodil_Armature/Arm/Cannon
+        weight: 1
+      - path: Krokodil_Armature/Root
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Arm_Socket
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/ArmUpper_L
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/ArmUpper_L/Arm_L
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Foot_L
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Foot_R
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Head
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Head/Mandibula
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Tail.01
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Tail.01/Tail.02
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Tail.01/Tail.02/Tail.03
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Thigh_L
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Thigh_L/Shin_L
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Thigh_R
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Thigh_R/Shin_R
+        weight: 1
+      - path: Krokodil_Body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Arm|RunCycle
+      takeName: Arm|RunCycle
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Krokodil_Armature
+        weight: 1
+      - path: Krokodil_Armature/Arm
+        weight: 1
+      - path: Krokodil_Armature/Arm/Cannon
+        weight: 1
+      - path: Krokodil_Armature/Root
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Arm_Socket
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/ArmUpper_L
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/ArmUpper_L/Arm_L
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Foot_L
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Foot_R
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Head
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Head/Mandibula
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Tail.01
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Tail.01/Tail.02
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Tail.01/Tail.02/Tail.03
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Thigh_L
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Thigh_L/Shin_L
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Thigh_R
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Thigh_R/Shin_R
+        weight: 1
+      - path: Krokodil_Body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Krokodil_Body|RunCycle
+      takeName: Krokodil_Body|RunCycle
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Krokodil_Armature
+        weight: 1
+      - path: Krokodil_Armature/Arm
+        weight: 1
+      - path: Krokodil_Armature/Arm/Cannon
+        weight: 1
+      - path: Krokodil_Armature/Root
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Arm_Socket
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/ArmUpper_L
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/ArmUpper_L/Arm_L
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Foot_L
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Foot_R
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Head
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Head/Mandibula
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Tail.01
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Tail.01/Tail.02
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Tail.01/Tail.02/Tail.03
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Thigh_L
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Thigh_L/Shin_L
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Thigh_R
+        weight: 1
+      - path: Krokodil_Armature/Root/Torso/Thigh_R/Shin_R
+        weight: 1
+      - path: Krokodil_Body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 3
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
