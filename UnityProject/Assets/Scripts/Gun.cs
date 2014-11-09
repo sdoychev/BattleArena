@@ -30,36 +30,41 @@ public class Gun : MonoBehaviour
 		// Setting up the references.
 		anim = transform.root.gameObject.GetComponent<Animator>();
 		playerCtrl = transform.root.GetComponent<PlayerControl>();
-		
-		switch (gameObject.transform.parent.transform.parent.
-		        transform.parent.transform.parent.transform.parent.
-		        transform.parent.transform.parent.
-		        transform.name) 
+
+        switch (transform.root.gameObject.transform.name) 
 		{
-		case "hero1":  
+		case "hero1":
+                print("hero1");
 			FireButton += "Player1";
 			AimHorizontalAxis += "Player1";
 			AimVerticalAxis += "Player1";
 			break;
 		case "hero2":
+            print("hero2");
 			FireButton += "Player2";
 			AimHorizontalAxis += "Player2";
 			AimVerticalAxis += "Player2";
 			break;
 		case "hero3":
+            print("hero3");
 			FireButton += "Player3";
 			AimHorizontalAxis += "Player3";
 			AimVerticalAxis += "Player3";
 			break;
 		case "hero4":
+            print("hero4");
 			FireButton += "Player4";
 			AimHorizontalAxis += "Player4";
 			AimVerticalAxis += "Player4";
 			break;
 		}
 	}
-	
-	
+
+    public void SwitchWeapon()
+    {
+        int waeapon = Random.Range(0, 3);
+    }
+
 	void Update ()
 	{
 		// If the fire button is pressed...

@@ -27,6 +27,7 @@ public class BombPickup : MonoBehaviour
 
 			// Increase the number of bombs the player has.
 			other.GetComponent<LayBombs>().bombCount++;
+            other.GetComponent<Gun>().SwitchWeapon();
 
 			// Destroy the crate.
 			Destroy(transform.root.gameObject);
