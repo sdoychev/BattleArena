@@ -1569,12 +1569,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flintgun: {fileID: 5000000, guid: de3b99ec18bab1a448f5d8a7893c3816, type: 2}
-  minigun: {fileID: 5000000, guid: 418b69b5a330cb94d87aaea971152e84, type: 2}
-  cannon: {fileID: 5000000, guid: f9dd63e5ea2a00e4c9ca09c80fb3a14c, type: 2}
-  pig: {fileID: 5000000, guid: f9dd63e5ea2a00e4c9ca09c80fb3a14c, type: 2}
-  trap: {fileID: 5000000, guid: f9dd63e5ea2a00e4c9ca09c80fb3a14c, type: 2}
-  activeWeapon: {fileID: 5000000, guid: f9dd63e5ea2a00e4c9ca09c80fb3a14c, type: 2}
-  explosion: {fileID: 100000, guid: 8e40a1086e0084e4e9e94a120128e71c, type: 2}
+  minigun: {fileID: 5000000, guid: 6e6459a241c7f2b4fa27cd1d971161d9, type: 2}
+  cannon: {fileID: 5000000, guid: 6e6459a241c7f2b4fa27cd1d971161d9, type: 2}
+  pig: {fileID: 5000000, guid: 6e6459a241c7f2b4fa27cd1d971161d9, type: 2}
+  trap: {fileID: 5000000, guid: 6e6459a241c7f2b4fa27cd1d971161d9, type: 2}
+  activeWeapon: {fileID: 5000000, guid: 6e6459a241c7f2b4fa27cd1d971161d9, type: 2}
+  explosion: {fileID: 100000, guid: b32ec70a67311b34cbf29110bb61b5a9, type: 2}
   speed: 20
   fireRate: 1
   applyForceToBullet: 0

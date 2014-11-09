@@ -92,17 +92,17 @@ public class GlobalScript : MonoBehaviour {
 
 		if (hero1_score >= maxScore)
         {
-            WinGame("hero1");
+            WinGame("El Krokodile");
         }else  if (hero2_score >= maxScore)
         {
-            WinGame("hero2");
+            WinGame("Captain Cook");
         }else  if (hero3_score >= maxScore)
         {
-            WinGame("hero3");
+            WinGame("Slash");
         }else  if (hero4_score >= maxScore)
         {
-			WinGame("hero4");
-        }
+			WinGame("Butthead");
+        }	
 
 	}
 
@@ -135,6 +135,7 @@ public class GlobalScript : MonoBehaviour {
     {
         score.SetGuiText(player + " wins");
         Reset();
+		Application.LoadLevel ("Win");
     }
 
     void Save()
