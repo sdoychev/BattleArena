@@ -31,7 +31,12 @@ public class Gun : MonoBehaviour
 		anim = transform.root.gameObject.GetComponent<Animator>();
 		playerCtrl = transform.root.GetComponent<PlayerControl>();
 		
-		switch (gameObject.transform.parent.transform.parent.transform.name) 
+		switch (gameObject.transform.parent.
+		        transform.parent.transform.parent.
+		        transform.parent.transform.parent.
+		        transform.parent.transform.parent.
+		        transform.parent.transform.parent.
+		        transform.name) 
 		{
 		case "hero1":  
 			FireButton += "Player1";
