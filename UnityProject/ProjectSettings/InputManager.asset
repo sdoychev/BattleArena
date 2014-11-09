@@ -52,7 +52,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 8
-    joyNum: 1
+    joyNum: 4
   - serializedVersion: 3
     m_Name: JumpPlayer2
     descriptiveName: 
@@ -68,7 +68,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 8
-    joyNum: 2
+    joyNum: 5
   - serializedVersion: 3
     m_Name: JumpPlayer3
     descriptiveName: 
@@ -84,7 +84,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 8
-    joyNum: 3
+    joyNum: 6
   - serializedVersion: 3
     m_Name: JumpPlayer4
     descriptiveName: 
@@ -98,9 +98,9 @@ InputManager:
     sensitivity: 1
     snap: 0
     invert: 0
-    type: 0
+    type: 2
     axis: 8
-    joyNum: 0
+    joyNum: 7
   - serializedVersion: 3
     m_Name: FirePlayer1
     descriptiveName: 
@@ -116,7 +116,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 9
-    joyNum: 1
+    joyNum: 4
   - serializedVersion: 3
     m_Name: FirePlayer2
     descriptiveName: 
@@ -132,7 +132,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 9
-    joyNum: 2
+    joyNum: 5
   - serializedVersion: 3
     m_Name: FirePlayer3
     descriptiveName: 
@@ -148,7 +148,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 9
-    joyNum: 3
+    joyNum: 6
   - serializedVersion: 3
     m_Name: FirePlayer4
     descriptiveName: 
@@ -162,9 +162,9 @@ InputManager:
     sensitivity: 1
     snap: 0
     invert: 0
-    type: 0
+    type: 2
     axis: 9
-    joyNum: 4
+    joyNum: 7
   - serializedVersion: 3
     m_Name: HorizontalPlayer1
     descriptiveName: 
@@ -180,7 +180,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 0
-    joyNum: 1
+    joyNum: 4
   - serializedVersion: 3
     m_Name: HorizontalPlayer2
     descriptiveName: 
@@ -196,7 +196,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 0
-    joyNum: 2
+    joyNum: 5
   - serializedVersion: 3
     m_Name: HorizontalPlayer3
     descriptiveName: 
@@ -212,7 +212,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 0
-    joyNum: 3
+    joyNum: 6
   - serializedVersion: 3
     m_Name: HorizontalPlayer4
     descriptiveName: 
@@ -223,12 +223,12 @@ InputManager:
     altPositiveButton: 
     gravity: 0
     dead: .189999998
-    sensitivity: 10
+    sensitivity: 1
     snap: 0
     invert: 0
-    type: 0
+    type: 2
     axis: 0
-    joyNum: 4
+    joyNum: 7
   - serializedVersion: 3
     m_Name: VerticalPlayer1
     descriptiveName: 
@@ -244,7 +244,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 1
-    joyNum: 1
+    joyNum: 4
   - serializedVersion: 3
     m_Name: VerticalPlayer2
     descriptiveName: 
@@ -260,7 +260,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 1
-    joyNum: 2
+    joyNum: 5
   - serializedVersion: 3
     m_Name: VerticalPlayer3
     descriptiveName: 
@@ -276,7 +276,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 1
-    joyNum: 3
+    joyNum: 6
   - serializedVersion: 3
     m_Name: VerticalPlayer4
     descriptiveName: 
@@ -290,9 +290,9 @@ InputManager:
     sensitivity: 1
     snap: 0
     invert: 0
-    type: 0
+    type: 2
     axis: 1
-    joyNum: 4
+    joyNum: 7
   - serializedVersion: 3
     m_Name: AimVerticalPlayer1
     descriptiveName: 
@@ -308,7 +308,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 4
-    joyNum: 1
+    joyNum: 4
   - serializedVersion: 3
     m_Name: AimVerticalPlayer2
     descriptiveName: 
@@ -324,7 +324,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 4
-    joyNum: 2
+    joyNum: 5
   - serializedVersion: 3
     m_Name: AimVerticalPlayer3
     descriptiveName: 
@@ -340,7 +340,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 4
-    joyNum: 3
+    joyNum: 6
   - serializedVersion: 3
     m_Name: AimVerticalPlayer4
     descriptiveName: 
@@ -351,12 +351,12 @@ InputManager:
     altPositiveButton: 
     gravity: 0
     dead: .189999998
-    sensitivity: 10
+    sensitivity: 1
     snap: 0
     invert: 0
-    type: 0
+    type: 2
     axis: 4
-    joyNum: 4
+    joyNum: 7
   - serializedVersion: 3
     m_Name: AimHorizontalPlayer1
     descriptiveName: 
@@ -372,7 +372,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 3
-    joyNum: 1
+    joyNum: 4
   - serializedVersion: 3
     m_Name: AimHorizontalPlayer2
     descriptiveName: 
@@ -388,7 +388,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 3
-    joyNum: 2
+    joyNum: 5
   - serializedVersion: 3
     m_Name: AimHorizontalPlayer3
     descriptiveName: 
@@ -404,7 +404,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 3
-    joyNum: 3
+    joyNum: 6
   - serializedVersion: 3
     m_Name: AimHorizontalPlayer4
     descriptiveName: 
@@ -415,9 +415,9 @@ InputManager:
     altPositiveButton: 
     gravity: 0
     dead: .189999998
-    sensitivity: 10
+    sensitivity: 1
     snap: 0
     invert: 0
-    type: 0
+    type: 2
     axis: 3
-    joyNum: 4
+    joyNum: 7
