@@ -76,7 +76,6 @@ public class PlayerControl : MonoBehaviour
 		if (globalScript)
 		{
 			roundIndex = globalScript.GetComponent<GlobalScript>().GetRound();
-			Debug.Log("aaaaaa " + heroIndex + " " + roundIndex);
 		}
 
 		heroIndex = (char)(heroIndex + roundIndex - 1);

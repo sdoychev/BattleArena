@@ -19,7 +19,6 @@ public class GlobalScript : MonoBehaviour {
         score = GameObject.Find("Score").GetComponent<Score>();
         //maxScore -= 1;// we are programmers and we count from zero
 		round++;
-		Debug.Log ("ccccc " + round);
     }
 
 	// Use this for initialization
@@ -50,7 +49,6 @@ public class GlobalScript : MonoBehaviour {
             WinGame("hero3");
         }else  if (hero4_score >= maxScore)
         {
-			Debug.Log("win " + maxScore + " " + hero4_score);
 			WinGame("hero4");
         }
 
@@ -109,7 +107,6 @@ public class GlobalScript : MonoBehaviour {
     // use after showing the win screen
     void Reset()
     {
-		Debug.Log ("RESET");
 		PlayerPrefs.DeleteKey("hero1_score");
         PlayerPrefs.DeleteKey("hero2_score");
         PlayerPrefs.DeleteKey("hero3_score");
