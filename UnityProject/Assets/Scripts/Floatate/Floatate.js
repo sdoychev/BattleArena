@@ -30,9 +30,9 @@ function Awake () {
 }
 
 function Update () {
-	transform.Rotate(Vector3(0, PrimaryRot, 0) * Time.deltaTime, Space.World);
+	transform.Rotate(Vector3(0, PrimaryRot, 0) * Time.deltaTime, Space.Self);
 	transform.Rotate(Vector3(SecondaryRot, 0, 0) * Time.deltaTime, Space.Self);
 	transform.Rotate(Vector3(0, 0, TertiaryRot) * Time.deltaTime, Space.Self);
 	
-	transform.position.y = bottom + (((Mathf.Cos((Time.time + bobOffset) * bobSpeed) + 1) / 2 ) * bobHeight);
+	transform.localPosition.y = bottom + (((Mathf.Cos((Time.time + bobOffset) * bobSpeed) + 1) / 2 ) * bobHeight);
 }
