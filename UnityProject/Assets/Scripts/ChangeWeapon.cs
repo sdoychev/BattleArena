@@ -40,8 +40,36 @@ public class ChangeWeapon : MonoBehaviour {
 		v1 = Input.GetAxis (AimHorizontalAxis);
 		v2 = Input.GetAxis (AimVerticalAxis);
 
-		float angle = Mathf.Atan2(v1, v2) * Mathf.Rad2Deg; 
-		//gameObject.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-	
+		Vector3 controllerInput = new Vector3 (v1*10, v2*10, 0);
+
+		Vector3 mouse_pos = Input.mousePosition;
+		Vector3 player_pos = Camera.main.WorldToScreenPoint(this.transform.position);
+
+		mouse_pos = player_pos + controllerInput;
+
+		if (gameObject.transform.parent.transform.parent.
+		    transform.parent.transform.parent.
+		    transform.parent.transform.parent.
+		    transform.parent.name == "hero2") 
+		{
+			Debug.Log ("mouse_pos.x" + mouse_pos.x);
+			Debug.Log ("mouse_pos.y" + mouse_pos.y);
+		}
+		
+		mouse_pos.x = (mouse_pos.x - player_pos.x) * -1 ;
+		mouse_pos.y = (mouse_pos.y - player_pos.y)  ;
+
+		if (gameObject.transform.parent.transform.parent.
+		    transform.parent.transform.parent.
+		    transform.parent.transform.parent.
+		    transform.parent.name == "hero2") 
+		{
+			//Debug.Log ("mouse_pos.x" + mouse_pos.x);
+			//Debug.Log ("mouse_pos.y" + mouse_pos.y);
+		}
+		
+		float angle = Mathf.Atan2 (mouse_pos.y, mouse_pos.x) * Mathf.Rad2Deg;
+		this.transform.rotation = Quaternion.Euler (new Vector3(0, 0, angle));
+
 	}
 }

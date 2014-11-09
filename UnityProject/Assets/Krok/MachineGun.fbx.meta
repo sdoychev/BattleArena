@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6f6e824885760534fa8ed1ab1760c34e
+guid: e63be77b8a1350840a5779c95fc32d93
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -7,10 +7,8 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Arm
-    7400000: Default Take
-    7400002: Scene
-    7400004: Arm|RunCycle
+    4300000: MachineGun
+    7400000: Scene
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -31,7 +29,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 2
+    globalScale: .00999999978
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
