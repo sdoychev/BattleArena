@@ -19,8 +19,40 @@ Platform assembly: C:\Unity\BattleArena\UnityProject\BattleArena_Data\Managed\As
 Loading C:\Unity\BattleArena\UnityProject\BattleArena_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
 Platform assembly: C:\Unity\BattleArena\UnityProject\BattleArena_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Unity\BattleArena\UnityProject\BattleArena_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.047 seconds
+- Completed reload, in  0.048 seconds
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 Platform assembly: C:\Unity\BattleArena\UnityProject\BattleArena_Data\Managed\System.Core.dll (this message is harmless)
+CREDITS
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+UnloadTime: 0.422237 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 204.
+Total: 0.602568 ms (FindLiveObjects: 0.008796 ms CreateObjectMapping: 0.007819 ms MarkObjects: 0.082101 ms  DeleteObjects: 0.082101 ms)
+
+UnloadTime: 0.360661 ms
+hero2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+hero1
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+hero4
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+hero3
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1559.
+Total: 1.232993 ms (FindLiveObjects: 0.058155 ms CreateObjectMapping: 0.020036 ms MarkObjects: 0.259011 ms  DeleteObjects: 0.468664 ms)
+
