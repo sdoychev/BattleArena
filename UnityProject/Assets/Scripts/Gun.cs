@@ -75,33 +75,33 @@ public class Gun : MonoBehaviour
     public void SwitchWeapon(int weapon)
     {
        // int weapon = Random.Range(0, 3);
-        flitngunObj.active = false;
-        minigunObj.active = false;
-        cannonObj.active = false;
-        trapObj.active = false;
+		flitngunObj.gameObject.SetActive(false);
+		minigunObj.gameObject.SetActive(false);
+		cannonObj.gameObject.SetActive(false);
+		trapObj.gameObject.SetActive(false);
 
         switch (weapon)
         {
             case 0:
-                flitngunObj.active = true;
+			flitngunObj.gameObject.SetActive(true);
                 activeWeapon = flintgun;
                 speed = 50;
                 fireRate = 0.5f;
                 break;
             case 1:
-                minigunObj.active = true;
+			minigunObj.gameObject.SetActive(true);
                 activeWeapon = minigun;
                 speed = 50;
                 fireRate = 0.2f;
                 break;
             case 2:
-                cannonObj.active = true;
+			cannonObj.gameObject.SetActive(true);
                 activeWeapon = cannon;
                 speed = 20;
                 fireRate = 1;
                 break;
             case 3:
-                trapObj.active = true;
+			trapObj.gameObject.SetActive(true);
                 activeWeapon = trap;
                 break;
         }
@@ -143,15 +143,16 @@ public class Gun : MonoBehaviour
 				}
 
 				Vector3 offset = new Vector3(v1, -v2, 0);
+				float angle = Vector3.Angle( new Vector3(1,0,0),offset);
 
 				// ... instantiate the rocket facing right and set it's velocity to the right. 
-				Rigidbody2D bulletInstance = Instantiate(activeWeapon, transform.position + offset*3, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
+				Rigidbody2D bulletInstance = Instantiate(activeWeapon, transform.position + offset*3, Quaternion.Euler(0,0,-Mathf.Sign(v2)*angle)) as Rigidbody2D;
                 // Create a quaternion with a random rotation in the z-axis.
                 Quaternion randomRotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
 
                 // Instantiate the explosion where the rocket is with the random rotation.
                 Instantiate(explosion, transform.position + offset * 3, randomRotation);
-				Vector2 vel = new Vector2(v1*speed, -v2*speed);
+				Vector2 vel = new Vector2(v1*speed,-v2*speed );
 				if (applyForceToBullet)
 				{
 					bulletInstance.AddForce(vel);
@@ -170,9 +171,10 @@ public class Gun : MonoBehaviour
 				}
 
 				Vector3 offset = new Vector3(v1, -v2, 0);
-
+				float angle = Vector3.Angle(offset, new Vector3(1,0,0));
+				Debug.Log(angle);
 				// Otherwise instantiate the rocket facing left and set it's velocity to the left.
-				Rigidbody2D bulletInstance = Instantiate(activeWeapon, transform.position + offset*3, Quaternion.Euler(new Vector3(0,0,180f))) as Rigidbody2D;
+				Rigidbody2D bulletInstance = Instantiate(activeWeapon, transform.position + offset*3, Quaternion.Euler(new Vector3(0,0,-Mathf.Sign(v2)*angle))) as Rigidbody2D;
                 Quaternion randomRotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
                 Instantiate(explosion, transform.position + offset * 3, randomRotation);
 				Vector2 vel = new Vector2(v1 * speed, -v2 * speed);
