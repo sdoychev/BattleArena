@@ -5,14 +5,17 @@ public class ChangeWeapon : MonoBehaviour {
 
 	private string AimHorizontalAxis = "AimHorizontal";
 	private string AimVerticalAxis = "AimVertical";
+	private PlayerControl playerCtrl;
+
+	void Awake()
+	{
+		playerCtrl = gameObject.transform.root.GetComponent<PlayerControl>();
+	}
 
 	// Use this for initialization
 	void Start () {
 	
-		switch (gameObject.transform.parent.transform.parent.
-		        transform.parent.transform.parent.
-		        transform.parent.transform.parent.
-		        transform.parent.name) 
+		switch (gameObject.transform.root.name) 
 		{
 		case "hero1":  
 			AimHorizontalAxis += "Player1";
@@ -39,35 +42,25 @@ public class ChangeWeapon : MonoBehaviour {
 		float v1,v2;
 		v1 = Input.GetAxis (AimHorizontalAxis);
 		v2 = Input.GetAxis (AimVerticalAxis);
-
-		Vector3 controllerInput = new Vector3 (v1*10, v2*10, 0);
-
-		Vector3 mouse_pos = Input.mousePosition;
-		Vector3 player_pos = Camera.main.WorldToScreenPoint(this.transform.position);
-
-		mouse_pos = player_pos + controllerInput;
-
-		if (gameObject.transform.parent.transform.parent.
-		    transform.parent.transform.parent.
-		    transform.parent.transform.parent.
-		    transform.parent.name == "hero2") 
-		{
-			//Debug.Log ("mouse_pos.x" + mouse_pos.x);
-			//Debug.Log ("mouse_pos.y" + mouse_pos.y);
+		int heading = 0;
+		if(playerCtrl.facingRight){
+			heading = -1;
+		}else{
+			heading = 1;
 		}
-		
-		mouse_pos.x = (mouse_pos.x - player_pos.x) * -1 ;
+
+		if (0.01f > v1 && v1 > -0.01 && 0.01f  > v2 && v2 > -0.01)
+		{
+			v1 = -heading*1.0f;
+			v2 = 0.0f;
+		}
+		Vector3 controllerInput = new Vector3 (v1*10, v2*10, 0);
+		Vector3 player_pos = gameObject.transform.root.position;
+		Vector3 mouse_pos = player_pos + controllerInput;
+
+		mouse_pos.x = (mouse_pos.x - player_pos.x) * heading ;
 		mouse_pos.y = (mouse_pos.y - player_pos.y)  ;
 
-		if (gameObject.transform.parent.transform.parent.
-		    transform.parent.transform.parent.
-		    transform.parent.transform.parent.
-		    transform.parent.name == "hero2") 
-		{
-			//Debug.Log ("mouse_pos.x" + mouse_pos.x);
-			//Debug.Log ("mouse_pos.y" + mouse_pos.y);
-		}
-		
 		float angle = Mathf.Atan2 (mouse_pos.y, mouse_pos.x) * Mathf.Rad2Deg;
 		this.transform.rotation = Quaternion.Euler (new Vector3(0, 0, angle));
 
