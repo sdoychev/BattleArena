@@ -73,8 +73,7 @@ public class Gun : MonoBehaviour
 	}
 
     public void SwitchWeapon(int weapon)
-    {
-       // int weapon = Random.Range(0, 3);
+	{
 		flitngunObj.gameObject.SetActive(false);
 		minigunObj.gameObject.SetActive(false);
 		cannonObj.gameObject.SetActive(false);
@@ -83,27 +82,37 @@ public class Gun : MonoBehaviour
         switch (weapon)
         {
             case 0:
-			flitngunObj.gameObject.SetActive(true);
+				flitngunObj.gameObject.SetActive(true);
                 activeWeapon = flintgun;
                 speed = 50;
                 fireRate = 0.5f;
                 break;
             case 1:
-			minigunObj.gameObject.SetActive(true);
+				minigunObj.gameObject.SetActive(true);
                 activeWeapon = minigun;
                 speed = 50;
                 fireRate = 0.2f;
                 break;
             case 2:
-			cannonObj.gameObject.SetActive(true);
+				cannonObj.gameObject.SetActive(true);
                 activeWeapon = cannon;
                 speed = 20;
                 fireRate = 1;
                 break;
             case 3:
-			trapObj.gameObject.SetActive(true);
-                activeWeapon = trap;
+				//trap broken you get a cannon
+				cannonObj.gameObject.SetActive(true);
+				activeWeapon = cannon;
+				speed = 20;
+				fireRate = 1;
                 break;
+			case 4:
+				//no pig you get a cannon
+				cannonObj.gameObject.SetActive(true);
+				activeWeapon = cannon;
+				speed = 20;
+				fireRate = 1;
+				break;
         }
     }
 

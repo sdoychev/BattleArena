@@ -35,9 +35,6 @@ public class HealthPickup : MonoBehaviour
 			// Update the health bar.
 			playerHealth.UpdateHealthBar();
 
-			// Trigger a new delivery.
-			pickupSpawner.StartCoroutine(pickupSpawner.DeliverPickup());
-
 			// Play the collection sound.
 			AudioSource.PlayClipAtPoint(collect,transform.position);
 

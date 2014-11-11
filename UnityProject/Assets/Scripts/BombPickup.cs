@@ -24,31 +24,8 @@ public class BombPickup : MonoBehaviour
 		{
 			// ... play the pickup sound effect.
 			AudioSource.PlayClipAtPoint(pickupClip, transform.position);
-
-			// Increase the number of bombs the player has.
-			other.GetComponent<LayBombs>().bombCount++;
-            //other.GetComponent<Gun>().SwitchWeapon();
-           string krok = "Krok";
-            switch (other.name)
-            {
-                case "hero1":
-                    krok += "1";
-                    break;
-                case "hero2":
-                    krok += "2";
-                    break;
-                case "hero3":
-                    krok += "3";
-                    break;
-                case "hero4":
-                    krok += "4";
-                    break;
-            }
-            string path = krok + "/Krokodil_Armature/Root/Torso/Arm_Socket/ArmWithWeapon/Hand";
-            print(path);
-
-            other.transform.Find(path).gameObject.GetComponent<Gun>().SwitchWeapon(2);
-           
+			int weapon = Random.Range(0, 2);
+			other.transform.Find("Krok/Krokodil_Armature/Root/Torso/Arm_Socket/ArmWithWeapon/Hand").gameObject.GetComponent<Gun>().SwitchWeapon(weapon);          
 
 			// Destroy the crate.
 			Destroy(transform.root.gameObject);

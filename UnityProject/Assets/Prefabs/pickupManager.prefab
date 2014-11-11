@@ -27,6 +27,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -39,7 +40,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickups:
-  - {fileID: 100000, guid: f14f67cf21d1d440181dad13051efd97, type: 2}
+  - {fileID: 100002, guid: 0f5f198ae178a804bbaca1a226607aa0, type: 2}
   - {fileID: 100000, guid: 9124ba8225a274c91a8eb0e924019612, type: 2}
   pickupDeliveryTime: 5
   dropRangeLeft: -15

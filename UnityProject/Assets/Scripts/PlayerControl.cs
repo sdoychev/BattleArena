@@ -104,7 +104,7 @@ public class PlayerControl : MonoBehaviour
 
 		// If the jump button is pressed and the player is grounded then the player should jump.
 		if(gameObject.transform.root.name == "hero1")
-			Debug.Log(Input.GetAxisRaw(JumpButton));
+			//Debug.Log(Input.GetAxisRaw(JumpButton));
 		if((Input.GetAxisRaw(JumpButton) != 0) && jumpTimer <= 0f&& !jump){
 
 			jumpTimer = 1f;;
