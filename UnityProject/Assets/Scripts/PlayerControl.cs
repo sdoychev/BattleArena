@@ -9,18 +9,17 @@ public class PlayerControl : MonoBehaviour
 	public bool jump = false;				// Condition for whether the player should jump.
 
 	public float moveForce = 365f;			// Amount of force added to move the player left and right.
-	public float maxSpeed = 5f;				// The fastest the player can travel in the x axis.
+	public float maxSpeed = 7f;				// The fastest the player can travel in the x axis.
 	public AudioClip[] jumpClips;			// Array of clips for when the player jumps.
-	public float jumpForce = 1000f;			// Amount of force added when the player jumps.
+	public float jumpForce = 10f;			// Amount of force added when the player jumps.
 	public AudioClip[] taunts;				// Array of clips for when the player taunts.
 	public float tauntProbability = 50f;	// Chance of a taunt happening.
 	public float tauntDelay = 1f;			// Delay for when the taunt should happen.
 
 
 	private int tauntIndex;					// The index of the taunts array indicating the most recent taunt.
-	private Transform groundCheck;			// A position marking where to check if the player is grounded.
-	private bool grounded = false;			// Whether or not the player is grounded.
-	private Animator anim;					// Reference to the player's animator component.
+	private Animator animmator;					// Reference to the player's animator component.
+	private Animation anim;
 
 	private string JumpButton = "Jump";
 	private string HorizontalAxis = "Horizontal";
@@ -28,15 +27,15 @@ public class PlayerControl : MonoBehaviour
 	private string AimHorizontalAxis = "AimHorizontal";
 	private string AimVerticalAxis = "AimVertical";
 
-	private float jumpTimer = 0f;
+	private float jumpTimer = 1f;
 
 	private char heroIndex = '0';
 
 	void Start()
 	{
 		// Setting up references.
-		groundCheck = transform.Find("groundCheck");
-		anim = GetComponent<Animator>();
+		animmator = GetComponent<Animator>();
+		anim = gameObject.transform.Find("Krok").GetComponent<Animation>();
 		
 		switch (gameObject.name) 
 		{
@@ -91,20 +90,26 @@ public class PlayerControl : MonoBehaviour
 
 	void Update()
 	{
-		if (jumpTimer > 0) {
-						jumpTimer -= Time.deltaTime;
-				}
+		if (jumpTimer > 0) 
+		{
+			jumpTimer -= Time.deltaTime;
+		}
 
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
-		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));  
+		//grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));  
 
 		//if (gameObject.name == "hero4")
 
 			//Debug.Log (grounded);
 
 		// If the jump button is pressed and the player is grounded then the player should jump.
-		if((Input.GetAxisRaw(JumpButton) != 0) && grounded && jumpTimer <= 0f)
+		if(gameObject.transform.root.name == "hero1")
+			Debug.Log(Input.GetAxisRaw(JumpButton));
+		if((Input.GetAxisRaw(JumpButton) != 0) && jumpTimer <= 0f&& !jump){
+
+			jumpTimer = 1f;;
 			jump = true;
+		}
 	}
 
 
@@ -117,7 +122,7 @@ public class PlayerControl : MonoBehaviour
 		if (hd == 0) //if no aim - get the move direction
 			hd = h;
 		// The Speed animator parameter is set to the absolute value of the horizontal input.
-		anim.SetFloat("Speed", Mathf.Abs(h));
+		animmator.SetFloat("Speed", Mathf.Abs(h));
 
 		// If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
 		if(h * rigidbody2D.velocity.x < maxSpeed)
@@ -142,7 +147,7 @@ public class PlayerControl : MonoBehaviour
 		if(jump)
 		{
 			// Set the Jump animator trigger parameter.
-			anim.SetTrigger("Jump");
+			animmator.SetTrigger("Jump");
 
 			// Play a random jump audio clip.
 			int i = Random.Range(0, jumpClips.Length);
@@ -153,18 +158,18 @@ public class PlayerControl : MonoBehaviour
 
 			// Make sure the player can't jump again until the jump conditions from Update are satisfied.
 			jump = false;
-			jumpTimer = 0.09f;
+
 		}
 
-		if (gameObject.name == "hero"+heroIndex) 
+		//if (gameObject.name == "hero"+heroIndex) 
 		{
-			if (gameObject.rigidbody2D.velocity.x != 0)
+			if (rigidbody2D.velocity.x != 0)
 			{
-				GameObject.Find("Krok"+heroIndex).GetComponent<Animation>().Play("Krokodil_Armature|RunCycle", PlayMode.StopAll);
+				anim.Play("Krokodil_Armature|RunCycle", PlayMode.StopAll);
 			}
 			else 
 			{
-				GameObject.Find("Krok"+heroIndex).GetComponent<Animation>().Play("Krokodil_Armature|Idle", PlayMode.StopAll);
+				anim.Play("Krokodil_Armature|Idle", PlayMode.StopAll);
 			}
 		}
 

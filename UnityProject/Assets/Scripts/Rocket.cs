@@ -11,7 +11,8 @@ public class Rocket : MonoBehaviour
 	void Start () 
 	{
 		// Destroy the rocket after 2 seconds if it doesn't get destroyed before then.
-		Destroy(gameObject, 4);
+		int liveTime = Random.Range(1,4);
+		Invoke("Explode",liveTime);
 	}
 
 
@@ -44,11 +45,7 @@ public class Rocket : MonoBehaviour
 			// ... find the Enemy script and call the Hurt function.
 			col.gameObject.GetComponent<Enemy>().Hurt();
 
-			// Call the explosion instantiation.
-			OnExplode();
-
-			// Destroy the rocket.
-			Destroy (gameObject);
+			Explode();
 		}
 		// Otherwise if it hits a bomb crate...
 		else if(col.tag == "BombPickup")
@@ -59,8 +56,7 @@ public class Rocket : MonoBehaviour
 			// Destroy the bomb crate.
 			Destroy (col.transform.root.gameObject);
 
-			// Destroy the rocket.
-			Destroy (gameObject);
+			Explode();
 		}
 		// Otherwise if the player manages to shoot himself...
         else if (col.gameObject.tag == "Player")
@@ -68,23 +64,22 @@ public class Rocket : MonoBehaviour
             // ... find the Enemy script and call the Hurt function.
             if (!isAOE)
 				col.GetComponent<PlayerHealth>().ApplyDamage(damage);
-
-            // Call the explosion instantiation.
-            OnExplode();
-
-            // Destroy the rocket.
-            Destroy(gameObject);
+			Explode();
         }
         else if(col.gameObject.tag == "SailCollider" || col.gameObject.tag == "Bullet"){
 
             }else
         {
-            // Call the explosion instantiation.
-            OnExplode();
-
-            // Destroy the rocket.
-            Destroy(gameObject);
+			Explode();
         }
 	}
 
+	void Explode()
+	{
+		// Call the explosion instantiation.
+		OnExplode();
+		
+		// Destroy the rocket.
+		Destroy(gameObject);
+	}
 }

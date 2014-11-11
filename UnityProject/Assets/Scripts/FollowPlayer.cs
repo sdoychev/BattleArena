@@ -7,25 +7,8 @@ public class FollowPlayer : MonoBehaviour
 	
 	private Transform player;		// Reference to the player.
 
-	private string playerGameObject = "hero";
-
 	void Awake ()
-	{/*
-		switch (gameObject.transform.parent.transform.name) 
-		{
-			case "hero1":  
-			playerGameObject += "1";
-			break;
-			case "hero2":
-			playerGameObject += "2";
-			break;
-			case "hero3":
-			playerGameObject += "3";
-			break;
-			case "hero4":
-			playerGameObject += "4";
-			break;
-		}*/
+	{
 
 		offset.y = 5.3f;
 
